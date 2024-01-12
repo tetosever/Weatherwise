@@ -11,3 +11,11 @@ G
 server-registry/pom.xml,4\0\40145a280399214848efe32bf63da257c046650d
 ‹
 [api-gateway/api-gateway/src/main/java/com/weatherwise/apigateway/ApiGatewayApplication.java,7\0\70f6021913a67f5a69e41bfd1c6dc86d624b3bbf
+O
+api-gateway/api-gateway/pom.xml,1\4\14fddb85e08a1dff522fd1d7a2b12e2255854742
+Ž
+^api-gateway/api-gateway/src/main/java/com/weatherwise/apigateway/FallBackMethodController.java,e\4\e4f49ff1fe8358e880d521685cecac91da5ba17e
+K
+api-gateway/api-gateway.iml,f\a\fa4314c454a01b514648de2f70895dc64f124ba4
+S
+#server-registry/server-registry.iml,5\5\555103e1cabce00a0095f5a84da96de3a9b1a97a

@@ -1,0 +1,25 @@
+
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+‹
+[api-gateway/api-gateway/src/main/java/com/weatherwise/apigateway/ApiGatewayApplication.java,7\0\70f6021913a67f5a69e41bfd1c6dc86d624b3bbf
+O
+api-gateway/api-gateway/pom.xml,1\4\14fddb85e08a1dff522fd1d7a2b12e2255854742
+Ž
+^api-gateway/api-gateway/src/main/java/com/weatherwise/apigateway/FallBackMethodController.java,e\4\e4f49ff1fe8358e880d521685cecac91da5ba17e
+k
+;hystrix-dashboard/src/main/resources/application.properties,c\7\c714eada1227a68973fa5fefdef2c6caabbf4733
+I
+hystrix-dashboard/pom.xml,9\2\92d7641f2b22ae0479f725d07fac46ffd4f7047b
+‘
+ahystrix-dashboard/src/main/java/com/weatherwise/hystrixdashboard/HystrixDashboardApplication.java,9\d\9df36507f0d6fefd6429cd02862b7399eb446f8b
+K
+api-gateway/api-gateway.iml,f\a\fa4314c454a01b514648de2f70895dc64f124ba4
+G
+server-registry/pom.xml,4\0\40145a280399214848efe32bf63da257c046650d
+`
+0config-server/src/main/resources/application.yml,a\c\ac20186028e684b172a19bab8e9b39d6b064e685
+…
+Uconfig-server/src/main/java/com/weatherwise/configserver/ConfigServerApplication.java,c\8\c8817fef8bf010fe920c01b5a4d3aa1b32bccd5b
+E
+config-server/pom.xml,a\2\a2f9618c8ad821b143a07a29a9805fcb0b2df470

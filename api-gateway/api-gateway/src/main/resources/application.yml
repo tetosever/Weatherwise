@@ -1,0 +1,66 @@
+server:
+  port:
+    9101
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: meteo
+          uri: lb://meteo
+          predicates:
+            - Path=/meteo/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: meteo
+                fallbackuri: forward:/meteoFallBack
+        - id: feedbacks
+          uri: lb://feedbacks
+          predicates:
+            - Path=/feedbacks/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: feedbacks
+                fallbackuri: forward:/feedbacksFallBack
+        - id: places
+          uri: lb://places
+          predicates:
+            - Path=/places/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: places
+                fallbackuri: forward:/placesFallBack
+        - id: cities
+          uri: lb://cities
+          predicates:
+            - Path=/cities/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: cities
+                fallbackuri: forward:/citiesFallBack
+
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka

@@ -7,19 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
-        <module name="server-registry" />
         <module name="config-server" />
+        <module name="server-registry" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="hystrix-dashboard" target="17" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
       <module name="config-server" options="-parameters" />
-      <module name="hystrix-dashboard" options="-parameters" />
       <module name="server-registry" options="-parameters" />
     </option>
   </component>

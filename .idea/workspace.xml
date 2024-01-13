@@ -5,30 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/6/3682c0022f43476f2a34717cfd8f1c4223c01a5e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c726cb7e0613f2d2d2e41a9ef517dd9874e7c10e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/b/dbabf2583abd85affe5a6f6ed34ec77bfa9197de" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/6/3682c0022f43476f2a34717cfd8f1c4223c01a5e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/7/c726cb7e0613f2d2d2e41a9ef517dd9874e7c10e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/b/dbabf2583abd85affe5a6f6ed34ec77bfa9197de" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/api-gateway/src/main/java/com/weatherwise/apigateway/config/RouteConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/api-gateway/src/main/java/com/weatherwise/apigateway/controller/FallBackController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/api-gateway/src/main/resources/bootstrap.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/bootstrap.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e4f49ff1fe8358e880d521685cecac91da5ba17e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/4/e4f49ff1fe8358e880d521685cecac91da5ba17e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/cities.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/feedbacks.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/meteo.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/places.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/server-registry.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway/src/main/java/com/weatherwise/apigateway/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway/src/main/java/com/weatherwise/apigateway/ApiGatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway/src/main/java/com/weatherwise/apigateway/FallBackMethodController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/api-gateway/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/api-gateway/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configurations/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/api-gateway.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/api-gateway.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server-registry/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-registry/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-registry/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server-registry/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-registry/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server-registry/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +78,7 @@
       <recent name="com.weatherwise.apigateway" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
+  <component name="RunManager" selected="Spring Boot.ServerRegistryApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.weatherwise.apigateway.ApiGatewayApplication" />
@@ -127,7 +117,7 @@
       <option name="presentableId" value="Default" />
       <updated>1705032370834</updated>
       <workItem from="1705032382857" duration="10882000" />
-      <workItem from="1705078201245" duration="22969000" />
+      <workItem from="1705078201245" duration="26595000" />
     </task>
     <servers />
   </component>

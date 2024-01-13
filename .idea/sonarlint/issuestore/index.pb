@@ -19,3 +19,15 @@ K
 api-gateway/api-gateway.iml,f\a\fa4314c454a01b514648de2f70895dc64f124ba4
 S
 #server-registry/server-registry.iml,5\5\555103e1cabce00a0095f5a84da96de3a9b1a97a
+U
+%configurations/api-gateway.properties,c\7\c726cb7e0613f2d2d2e41a9ef517dd9874e7c10e
+U
+%configurations/application.properties,d\b\dbabf2583abd85affe5a6f6ed34ec77bfa9197de
+à
+Xapi-gateway/api-gateway/src/main/java/com/weatherwise/apigateway/FallBackController.java,3\6\3682c0022f43476f2a34717cfd8f1c4223c01a5e
+ì
+capi-gateway/api-gateway/src/main/java/com/weatherwise/apigateway/controller/FallBackController.java,3\c\3c5e346a69c9c7b251c9eaebd9f2af70772cd0cd
+é
+^api-gateway/api-gateway/src/main/java/com/weatherwise/apigateway/controller/FallBackController,7\1\716ed90afcd1bda1dba4ac963ef1f84af3ba663c
+è
+_api-gateway/api-gateway/src/main/java/com/weatherwise/apigateway/config/RouteConfiguration.java,d\9\d90a3753c6dcd69bf4f0a0e359d73c57595da30b

@@ -8,22 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/payload/ApiResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/payload/Coord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/payload/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/payload/GroupWeather.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/payload/Sys.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/payload/Weather.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/payload/WeatherMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/payload/Wind.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/places/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/meteo.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/meteo.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedbacks/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meteo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/meteo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/controller/MeteoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/controller/MeteoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/model/Meteo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/meteo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/meteo/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/places/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/places/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-registry/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/server-registry/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +22,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Dockerfile" />
         <option value="Kubernetes Deployment" />
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -47,13 +36,6 @@
 }</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -81,12 +63,15 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Admin/OneDrive/Desktop/Universita/WeatherWise/meteo/src/main/java/com/weatherwise/meteo",
+    "last_opened_file_path": "/Users/tetosever/Desktop/Cloud Projects/WeatherWise/places",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "run.configurations.included.in.services": "true",
     "settings.editor.selected.configurable": "spring",
     "spring.configuration.checksum": "b71c7431a8f68fb857de65b67ac9cc49"
@@ -94,6 +79,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/places" />
+      <recent name="$PROJECT_DIR$/config-server" />
       <recent name="C:\Users\Admin\OneDrive\Desktop\Universita\WeatherWise\meteo\src\main\java\com\weatherwise\meteo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -112,7 +99,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MeteoApplication">
+  <component name="RunManager" selected="Spring Boot.ConfigServerApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.weatherwise.apigateway.ApiGatewayApplication" />

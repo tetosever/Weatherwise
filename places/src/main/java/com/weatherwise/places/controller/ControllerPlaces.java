@@ -4,6 +4,8 @@ import com.weatherwise.places.model.Comment;
 import com.weatherwise.places.service.PlacesService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,10 +18,10 @@ public class ControllerPlaces {
     private PlacesService placesService;
 
     @PostMapping("/")
-    public String saveComment(@RequestBody Comment comment) {
+    public ResponseEntity<String> saveComment(@RequestBody Comment comment) {
         log.info("Inside saveComment of PlacesController");
         placesService.saveComment(comment);
-        return 200 + " OK";
+        return  ResponseEntity.status(HttpStatus.CREATED).body("Comment saved successfully");
     }
 
     @GetMapping("/citta/{city}")

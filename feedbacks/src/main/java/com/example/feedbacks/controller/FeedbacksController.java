@@ -4,6 +4,8 @@ import com.example.feedbacks.model.Feedback;
 import com.example.feedbacks.service.FeedbacksService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -15,10 +17,10 @@ public class FeedbacksController {
     private FeedbacksService feedbacksService;
 
     @PostMapping("/")
-    public String saveFeedback(@RequestBody Feedback feedback) {
+    public ResponseEntity<String> saveFeedback(@RequestBody Feedback feedback) {
         log.info("Inside saveFeedback of FeedbacksController");
         feedbacksService.saveFeedbacks(feedback);
-        return 200 + " OK";
+        return  ResponseEntity.status(HttpStatus.CREATED).body("Comment saved successfully");
     }
 
     @GetMapping("/citta/{city}")

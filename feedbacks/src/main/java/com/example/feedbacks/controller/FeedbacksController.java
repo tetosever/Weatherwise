@@ -15,9 +15,10 @@ public class FeedbacksController {
     private FeedbacksService feedbacksService;
 
     @PostMapping("/")
-    public void saveFeedback(@RequestBody Feedback feedback) {
+    public String saveFeedback(@RequestBody Feedback feedback) {
         log.info("Inside saveFeedback of FeedbacksController");
         feedbacksService.saveFeedbacks(feedback);
+        return 200 + " OK";
     }
 
     @GetMapping("/citta/{city}")

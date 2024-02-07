@@ -16,9 +16,10 @@ public class ControllerPlaces {
     private PlacesService placesService;
 
     @PostMapping("/")
-    public Comment saveComment(@RequestBody Comment comment) {
+    public String saveComment(@RequestBody Comment comment) {
         log.info("Inside saveComment of PlacesController");
-        return  placesService.saveComment(comment);
+        placesService.saveComment(comment);
+        return 200 + " OK";
     }
 
     @GetMapping("/citta/{city}")

@@ -9,11 +9,10 @@
         <option value="$PROJECT_DIR$/server-registry/pom.xml" />
         <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/feedbacks/pom.xml" />
-        <option value="$PROJECT_DIR$/places/pom.xml" />
         <option value="$PROJECT_DIR$/meteo/pom.xml" />
+        <option value="$PROJECT_DIR$/places/pom.xml" />
       </list>
     </option>
-    <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="temurin-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

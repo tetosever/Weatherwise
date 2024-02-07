@@ -1,4 +1,4 @@
-package com.example.places;
+package com.weatherwise.places;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

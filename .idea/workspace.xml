@@ -8,11 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/places/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-registry/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/server-registry/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/places/src/main/java/com/weatherwise/places/controller/ControllerPlaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/places/src/main/java/com/weatherwise/places/controller/ControllerPlaces.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,20 +18,43 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Dockerfile" />
         <option value="Kubernetes Deployment" />
         <option value="Class" />
-        <option value="Dockerfile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -63,24 +82,25 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "/Users/tetosever/Desktop/Cloud Projects/WeatherWise/places",
+    "last_opened_file_path": "C:/Users/Admin/Downloads/geodb-java-client-master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "spring",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "spring.configuration.checksum": "b71c7431a8f68fb857de65b67ac9cc49"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/places" />
-      <recent name="$PROJECT_DIR$/config-server" />
       <recent name="C:\Users\Admin\OneDrive\Desktop\Universita\WeatherWise\meteo\src\main\java\com\weatherwise\meteo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -99,7 +119,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ConfigServerApplication">
+  <component name="RunManager" selected="Spring Boot.FeedbacksApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.weatherwise.apigateway.ApiGatewayApplication" />
@@ -134,9 +154,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlacesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="PlacesApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
       <module name="places" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.places.PlacesApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.weatherwise.places.PlacesApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,6 +169,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.ConfigServerApplication" />
+      <item itemvalue="Spring Boot.FeedbacksApplication" />
+      <item itemvalue="Spring Boot.PlacesApplication (1)" />
+      <item itemvalue="Spring Boot.ServerRegistryApplication" />
+      <item itemvalue="Spring Boot.MeteoApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.MeteoApplication" />
@@ -173,7 +202,12 @@
       <workItem from="1705078201245" duration="30766000" />
       <workItem from="1707122748606" duration="16288000" />
       <workItem from="1707166208585" duration="652000" />
-      <workItem from="1707210714054" duration="7461000" />
+      <workItem from="1707210714054" duration="12672000" />
+      <workItem from="1707239701441" duration="1174000" />
+      <workItem from="1707250813330" duration="7178000" />
+      <workItem from="1707260504048" duration="1197000" />
+      <workItem from="1707292974113" duration="3504000" />
+      <workItem from="1707315977062" duration="8116000" />
     </task>
     <servers />
   </component>

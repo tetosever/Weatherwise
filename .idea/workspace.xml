@@ -7,7 +7,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="">
+    <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="frontend update">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/feedbacks.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/feedbacks.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedbacks/src/main/java/com/example/feedbacks/controller/FeedbacksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/src/main/java/com/example/feedbacks/controller/FeedbacksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-service/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-service/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-service/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-service/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-service/src/FeedbackForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/FeedbackForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-service/src/InterestPoint.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/InterestPoint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-service/src/WeatherSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/WeatherSearch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-service/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/controller/MeteoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/controller/MeteoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/places/src/main/java/com/weatherwise/places/controller/ControllerPlaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/places/src/main/java/com/weatherwise/places/controller/ControllerPlaces.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,35 +40,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="JpbToolWindowState">
-    <option name="myId2FirstActivated">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
-      </map>
-    </option>
-    <option name="myId2Visible">
-      <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
-        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
-      </map>
-    </option>
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -68,6 +60,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.All in places.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -77,28 +70,33 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.ApiGatewayApplication.executor": "Run",
     "Spring Boot.ConfigServerApplication.executor": "Run",
+    "Spring Boot.FeedbacksApplication.executor": "Run",
     "Spring Boot.MeteoApplication.executor": "Run",
+    "Spring Boot.PlacesApplication (1).executor": "Run",
+    "Spring Boot.PlacesApplication.executor": "Run",
     "Spring Boot.ServerRegistryApplication.executor": "Run",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Admin/Downloads/geodb-java-client-master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Admin/OneDrive/Desktop/Universita/WeatherWise/meteo/src/main/java/com/weatherwise/meteo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "spring.configuration.checksum": "b71c7431a8f68fb857de65b67ac9cc49"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql",
-      "postgresql"
-    ]
+    "settings.editor.selected.configurable": "spring",
+    "spring.configuration.checksum": "b71c7431a8f68fb857de65b67ac9cc49",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\OneDrive\Desktop\Universita\WeatherWise\meteo\src\main\java\com\weatherwise\meteo" />
@@ -119,7 +117,15 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.FeedbacksApplication">
+  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
+    <configuration name="All in places" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="places" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.weatherwise.apigateway.ApiGatewayApplication" />
@@ -154,8 +160,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlacesApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <option name="ACTIVE_PROFILES" />
+    <configuration name="PlacesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="places" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.weatherwise.places.PlacesApplication" />
       <method v="2">
@@ -169,24 +174,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Spring Boot.ApiGatewayApplication" />
-      <item itemvalue="Spring Boot.ConfigServerApplication" />
-      <item itemvalue="Spring Boot.FeedbacksApplication" />
-      <item itemvalue="Spring Boot.PlacesApplication (1)" />
-      <item itemvalue="Spring Boot.ServerRegistryApplication" />
-      <item itemvalue="Spring Boot.MeteoApplication" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.MeteoApplication" />
+        <item itemvalue="JUnit.All in places" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-temurin-21.0.1-f644763e9732-a3c558b9" />
+        <option value="jdk-17.0.10-temurin-17.0.10-4caba194b151-f6707456" />
       </set>
     </attachedChunks>
   </component>
@@ -202,12 +200,10 @@
       <workItem from="1705078201245" duration="30766000" />
       <workItem from="1707122748606" duration="16288000" />
       <workItem from="1707166208585" duration="652000" />
-      <workItem from="1707210714054" duration="12672000" />
-      <workItem from="1707239701441" duration="1174000" />
-      <workItem from="1707250813330" duration="7178000" />
-      <workItem from="1707260504048" duration="1197000" />
-      <workItem from="1707292974113" duration="3504000" />
-      <workItem from="1707315977062" duration="8116000" />
+      <workItem from="1707210714054" duration="7461000" />
+      <workItem from="1707327939009" duration="449000" />
+      <workItem from="1707328401019" duration="9198000" />
+      <workItem from="1707352708797" duration="5836000" />
     </task>
     <servers />
   </component>
@@ -224,6 +220,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fix bug" />
+    <MESSAGE value="frontend update" />
+    <option name="LAST_COMMIT_MESSAGE" value="frontend update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

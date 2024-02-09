@@ -5,18 +5,21 @@ import com.weatherwise.places.service.PlacesService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+
 import java.util.List;
 
+@CrossOrigin
 @RestController
-@RequestMapping("/places")
+@RequestMapping(value = "/places", method = {RequestMethod.GET, RequestMethod.POST})
 @Slf4j
 public class ControllerPlaces {
     @Autowired
     private PlacesService placesService;
-
+    @CrossOrigin
     @PostMapping("/")
     public ResponseEntity<String> saveComment(@RequestBody Comment comment) {
         log.info("Inside saveComment of PlacesController");
@@ -24,11 +27,13 @@ public class ControllerPlaces {
         return  ResponseEntity.status(HttpStatus.CREATED).body("Comment saved successfully");
     }
 
+    @CrossOrigin
     @GetMapping("/citta/{city}")
     public List<Comment> findCommentByCity(@PathVariable("city") String city) {
         log.info("Inside findCommentByCity of PlacesController");
         return placesService.findCommentByCity(city);
     }
+
     @GetMapping("/initdb")
     public String initDb(){
         Comment comment = new Comment();

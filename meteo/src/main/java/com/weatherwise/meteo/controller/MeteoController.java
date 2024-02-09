@@ -21,6 +21,7 @@ public class MeteoController {
     }
 
 
+    @CrossOrigin
     @RequestMapping(value = "/{city}", method = RequestMethod.GET)
     public ApiResponse weatherForCity(@PathVariable("city") String city) {
         WeatherMapper weather = weatherService.fetchWeatherByCity(city);

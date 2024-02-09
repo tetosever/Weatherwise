@@ -8,21 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="frontend update">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/feedbacks.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/feedbacks.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedbacks/src/main/java/com/example/feedbacks/controller/FeedbacksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/src/main/java/com/example/feedbacks/controller/FeedbacksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-service/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-service/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-service/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-service/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-service/src/FeedbackForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/FeedbackForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-service/src/InterestPoint.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/InterestPoint.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-service/src/WeatherSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/WeatherSearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-service/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/controller/MeteoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/controller/MeteoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/places/src/main/java/com/weatherwise/places/controller/ControllerPlaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/places/src/main/java/com/weatherwise/places/controller/ControllerPlaces.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedbacks/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedbacks/src/main/java/com/example/feedbacks/repository/FeedbacksRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/src/main/java/com/example/feedbacks/repository/FeedbacksRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +30,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
   </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -79,7 +84,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Admin/OneDrive/Desktop/Universita/WeatherWise/meteo/src/main/java/com/weatherwise/meteo",
+    "last_opened_file_path": "C:/Users/Admin/Downloads/geodb-java-client-master/geodb-java-client-master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -92,6 +97,11 @@
     "settings.editor.selected.configurable": "spring",
     "spring.configuration.checksum": "b71c7431a8f68fb857de65b67ac9cc49",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="ReactorSettings">
@@ -117,7 +127,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
+  <component name="RunManager" selected="Spring Boot.FeedbacksApplication">
     <configuration name="All in places" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="places" />
       <option name="PACKAGE_NAME" value="" />
@@ -204,6 +214,7 @@
       <workItem from="1707327939009" duration="449000" />
       <workItem from="1707328401019" duration="9198000" />
       <workItem from="1707352708797" duration="5836000" />
+      <workItem from="1707469820823" duration="4407000" />
     </task>
     <servers />
   </component>

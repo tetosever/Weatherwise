@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import WeatherSearch from './WeatherSearch';
-import FeedbackForm from './FeedbackForm';
-import  InterestPoint from './InterestPoint';
+import WeatherSearchAP from './WeatherSearchAP';
+
+
 
 class App extends Component {
 constructor(props) {
@@ -20,13 +20,10 @@ constructor(props) {
         </div>
          <div>
       <h1>Search by City</h1>
-      <WeatherSearch />
+      <WeatherSearchAP />
     </div>
-        <div className="App">
-            <FeedbackForm />
-        </div>
-        <h1>Punti di Interesse</h1>
-         <InterestPoint />
+        
+
       </div>
       
      

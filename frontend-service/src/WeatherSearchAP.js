@@ -4,16 +4,27 @@ import './index.css';
 import { AiFillLike, AiFillDislike } from "react-icons/ai";
 import Button from 'react-bootstrap/Button';
 
-function WeatherSearch() {
+function WeatherSearchAP() {
   const [location, setLocation] = useState('');
   const [weatherData, setWeatherData] = useState(null);
   const [errorWeather, setErrorWeather] = useState(null);
+  const [errorFeedback, setErrorFeedback] = useState(null)
   const [errorPlaces, setErrorPlaces] = useState(null);
+  const [errorWeatherProbability, setErrorWeatherProbability] = useState(null);
   const [posts, setPosts] = useState([]);
   const [response1, setResponse1] = useState(null);
   const [response2, setResponse2] = useState(null);
   const [response3, setResponse3] = useState(null);
+  const [weatherProbability, setWeatherProbability] = useState(null);
   const [feedback, setFeedback] = useState(null);
+  const [newPointOfInterest, setNewPointOfInterest] = useState({
+    commentId: '',
+    userName: '',
+    placeName: '',
+    city: '',
+    description: '',
+    rating: ''
+  });
 
   // Fetch weather and point of interest data
   const handleSubmit = async (event) => {
@@ -37,6 +48,15 @@ function WeatherSearch() {
       setErrorPlaces('Error fetching location data. Please try again later.');
       setPosts([]);
     }
+
+    try {
+      const response4 = await axios.get(`http://localhost:8080/feedbacks/${location}`);
+      setWeatherProbability(response4.data);
+      setErrorWeatherProbability(null);
+    } catch (error) {
+      console.error('Error fetching weather probability:', error);
+      setErrorWeatherProbability('Error fetching probability. Please try again later.');
+    }
   };
   
   const handleFeedbackSubmit = async (value) => {
@@ -54,6 +74,42 @@ function WeatherSearch() {
       //setErrorFeedback('Error submitting feedback. Please try again.');
     }
   };
+
+  const handlePointOfInterestSubmit = async (e) => {
+    e.preventDefault();
+    const userData = {
+      commentId:101,
+      userName:newPointOfInterest.userName,
+      placeName:newPointOfInterest.placeName,
+      city:location,
+      description:newPointOfInterest.description,
+      rating:Number(newPointOfInterest.rating)
+    };
+    try {
+      console.log(userData);
+      const response4 = await axios.post('http://localhost:8080/places/', userData, {
+        headers: {
+          // Overwrite Axios's automatically set Content-Type
+          'Content-Type': 'application/json'
+        }
+      });
+      console.log('Point of interest added:', response4.data);
+      // Optionally, you can update state or perform other actions after successful submission
+    } catch (error) {
+      console.error('Error adding point of interest:', error);
+      // Handle error
+    }
+  };
+
+
+  const handleChangePointOfInterest = (e) => {
+    const value = e.target.value;
+    setNewPointOfInterest({
+      ...newPointOfInterest,
+      [e.target.name]: value
+    });
+  };
+
 
   return (
     <div>
@@ -100,6 +156,7 @@ function WeatherSearch() {
             </button>
           </div>
         </form>
+        {errorFeedback && <p>{errorFeedback}</p>}
         {feedback && (
           <div>
             <h3>Saved Successfully</h3>
@@ -107,6 +164,13 @@ function WeatherSearch() {
           </div>
         )}
       </div>
+      {errorWeatherProbability && <p>{errorWeatherProbability}</p>}
+        {weatherProbability && (
+          <div>
+              <h2>Service Trust</h2>
+              <h2>{weatherProbability.data}</h2>
+          </div>
+        )}
       <div>
         <h2>Point of Interest</h2>
         <div className="card-container">
@@ -116,7 +180,7 @@ function WeatherSearch() {
             posts.map((post) => (
               <div className="card" key={post.id}>
                 <div className="card-header">
-                  #{post.id} {post.placeName}
+                   <h3>{post.placeName}</h3>
                   <p className="card-text">{post.userName}</p>
                 </div>
                 <div className="card-body">
@@ -126,10 +190,60 @@ function WeatherSearch() {
               </div>
             ))
           )}
+
+<div>
+<div className="card" >
+      <h3>Add New Point of Interest</h3>
+      <form onSubmit={handlePointOfInterestSubmit}>
+        <label>
+          Place Name:
+          <input
+           className="form-input"
+            type="text"
+            name="placeName"
+            value={newPointOfInterest.placeName}
+            onChange={handleChangePointOfInterest}
+          />
+        </label>
+        <label>
+          User Name:
+          <input
+           className="form-input"
+            type="text"
+            name="userName"
+            value={newPointOfInterest.userName}
+            onChange={handleChangePointOfInterest}
+          />
+        </label>
+        <label>
+          Rating:
+          <input
+            className="form-input"
+            type="text"
+            name="rating"
+            value={newPointOfInterest.rating}
+            onChange={handleChangePointOfInterest}
+          />
+        </label>
+        <label>
+          Description:
+          <textarea
+           className="form-input"
+            name="description"
+            value={newPointOfInterest.description}
+            onChange={handleChangePointOfInterest}
+          />
+        </label>
+        <button  className="form-submit"type="submit">Add Point of Interest</button>
+      </form>
+    </div>
+</div>
+
         </div>
       </div>
+
     </div>
   );
 }
 
-export default WeatherSearch;
+export default WeatherSearchAP;

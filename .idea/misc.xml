@@ -9,8 +9,8 @@
         <option value="$PROJECT_DIR$/server-registry/pom.xml" />
         <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/feedbacks/pom.xml" />
-        <option value="$PROJECT_DIR$/places/pom.xml" />
         <option value="$PROJECT_DIR$/meteo/pom.xml" />
+        <option value="$PROJECT_DIR$/places/pom.xml" />
       </list>
     </option>
     <option name="workspaceImportForciblyTurnedOn" value="true" />

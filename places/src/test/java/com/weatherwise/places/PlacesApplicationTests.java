@@ -1,4 +1,4 @@
-package com.example.places;
+package com.weatherwise.places;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

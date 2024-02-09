@@ -8,7 +8,8 @@ function FeedbackForm() {
 
   const handleSubmit = async (value) => {
     try {
-      const response = await axios.post('https://dccd540d-90df-4a0a-9da5-297711ad9136.mock.pstmn.io/feedback/', {
+      const response = await axios.post('https://c9a0b6af-3fac-413c-99b9-8de6282889b3.mock.pstmn.io/feedback/', {
+        id: "Bormio",
         rating: value
       });
       setResponse(response.data);

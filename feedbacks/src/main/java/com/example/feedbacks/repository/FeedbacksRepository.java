@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface FeedbacksRepository extends JpaRepository<Feedback, Long> {
     List<Feedback> findByCityIgnoreCase(String city);
-    void updateFeedbacks(Feedback feedback);
+    //void updateFeedbacks(Feedback feedback);
 
 
 }

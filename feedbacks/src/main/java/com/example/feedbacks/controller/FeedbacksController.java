@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
+@CrossOrigin
 @RestController
 @RequestMapping("/feedbacks")
 @Slf4j
@@ -16,17 +16,19 @@ public class FeedbacksController {
     @Autowired
     private FeedbacksService feedbacksService;
 
+    @CrossOrigin
     @PostMapping("/")
     public ResponseEntity<String> saveFeedback(@RequestBody Feedback feedback) {
         log.info("Inside saveFeedback of FeedbacksController");
         feedbacksService.saveFeedbacks(feedback);
         return  ResponseEntity.status(HttpStatus.CREATED).body("Comment saved successfully");
     }
-
+    @CrossOrigin
     @GetMapping("/citta/{city}")
     public  float retriveFeedbackByCity(@PathVariable("city") String city) {
         return feedbacksService.percentageLikeOfCity(city);
     }
+    @CrossOrigin
     @GetMapping("/initdb")
     public String initDb(){
         Feedback feedback = new Feedback();

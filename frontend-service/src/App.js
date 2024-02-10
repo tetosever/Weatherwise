@@ -19,7 +19,7 @@ constructor(props) {
           <h1 class="display-4">WeatherWise</h1>
         </div>
          <div>
-      <h1>Search by City</h1>
+      <h2>Search by City</h2>
       <WeatherSearchAP />
     </div>
         

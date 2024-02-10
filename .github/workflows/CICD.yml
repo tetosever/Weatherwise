@@ -1,0 +1,68 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build-java-services:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        service: [config-server, server-registry, api-gateway, feedbacks, meteo, places]
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up JDK 17
+      uses: actions/setup-java@v2
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        cache: maven
+
+    - name: Build with Maven
+      run: mvn clean install -DskipTests -f ./${{ matrix.service }}/pom.xml
+
+    - name: Build Docker image
+      run: docker build -t matteosevergninistudent/${{ matrix.service }}:latest ./${{ matrix.service }}
+    
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Push Docker image to Docker Hub
+      run: docker push matteosevergninistudent/${{ matrix.service }}:latest
+
+  build-frontend:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14' # Sostituisci con la versione di Node.js usata dal tuo progetto frontend
+
+    - name: Install dependencies
+      run: |
+        cd frontend-service
+        npm install
+
+    - name: Build
+      run: |
+        cd frontend-service
+        npm run build
+
+    - name: Build Docker image
+      run: docker build -t matteosevergninistudent/frontend-service:latest ./frontend-service
+
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Push Docker image to Docker Hub
+      run: docker push matteosevergninistudent/frontend-service:latest

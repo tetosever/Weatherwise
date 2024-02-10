@@ -3,32 +3,73 @@ import axios from 'axios';
 import './index.css';
 import { AiFillLike, AiFillDislike } from "react-icons/ai";
 import Button from 'react-bootstrap/Button';
+import StarRatingInput from './StarRatingInput';
 
 function WeatherSearchAP() {
-  const [location, setLocation] = useState('');
+  const [location, setLocation] = useState('Bergamo');
   const [weatherData, setWeatherData] = useState(null);
+  const [cityImageURL, setCityImageURL] = useState('');
   const [errorWeather, setErrorWeather] = useState(null);
-  const [errorFeedback, setErrorFeedback] = useState(null)
+  const [errorFeedback, setErrorFeedback] = useState(null);
+  const [errorCityImage, setErrorCityImage] = useState(null)
   const [errorPlaces, setErrorPlaces] = useState(null);
   const [errorWeatherProbability, setErrorWeatherProbability] = useState(null);
   const [posts, setPosts] = useState([]);
-  const [response1, setResponse1] = useState(null);
-  const [response2, setResponse2] = useState(null);
-  const [response3, setResponse3] = useState(null);
   const [weatherProbability, setWeatherProbability] = useState(null);
   const [feedback, setFeedback] = useState(null);
   const [newPointOfInterest, setNewPointOfInterest] = useState({
-    commentId: '',
     userName: '',
     placeName: '',
     city: '',
     description: '',
-    rating: ''
+    rating: 0
   });
 
+  const [currentDateTime, setCurrentDateTime] = useState(new Date());
+  const [suggestions, setSuggestions] = useState([]);
+
+  const headers = {
+    'Content-Type': 'text/plain'
+  };
+
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentDateTime(new Date());
+    }, 1000);
+
+    // Cleanup function to clear the interval when the component unmounts
+    return () => clearInterval(intervalId);
+  }, []); // Empty dependency array ensures the effect runs only once after initial render
+
+
+    const fetchSuggestions = async () => {
+      try {
+        //const response = await axios.get(`http://localhost:8080/cities/${location}`);
+        const response = ['Bergamo', 'Bormio','Milano','Paris', 'London', 'Tokyo'];
+        setSuggestions(response);
+      } catch (error) {
+        console.error('Error fetching suggestions:', error);
+        setSuggestions([]);
+      }
+    };
+
+      // Handle input change event
+  const handleInputChange = (event) => {
+    const { value } = event.target;
+    setLocation(value); // Update location state with the input value
+    fetchSuggestions(value); // Fetch suggestions based on the input value
+  };
+
+  const handleSuggestionClick = (value) => {
+    setLocation(value); // Set location based on the suggestion clicked
+    handleSubmit(); // Fetch weather data based on the selected location
+  };
+
+
+  
   // Fetch weather and point of interest data
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async (event = null) => {
     try {
       const response1 = await axios.get(`http://localhost:8080/meteo/${location}`);
       setWeatherData(response1.data);
@@ -50,35 +91,58 @@ function WeatherSearchAP() {
     }
 
     try {
-      const response4 = await axios.get(`http://localhost:8080/feedbacks/${location}`);
+      const response4 = await axios.get(`http://localhost:8080/feedbacks/citta/${location}`);
       setWeatherProbability(response4.data);
       setErrorWeatherProbability(null);
     } catch (error) {
       console.error('Error fetching weather probability:', error);
       setErrorWeatherProbability('Error fetching probability. Please try again later.');
     }
+
+
+  
   };
+
+  useEffect(() => {
+    handleSubmit();
+  }, []); // Empty dependency array ensures this effect runs only once
+
   
   const handleFeedbackSubmit = async (value) => {
     try {
-      const response3 = await axios.post('YOUR_POST_URL_HERE', {
+      console.log({id: location, rating: value});
+      const response3 = await axios.post('http://localhost:44885/feedbacks/', {
         id: location,
         rating: value
       });
       setFeedback(response3.data);
-      //setErrorFeedback(null);
+      setErrorFeedback(null);
       console.log('Feedback submitted:', response3.data);
     } catch (error) {
       console.error('Error submitting feedback:', error);
       setFeedback(null);
-      //setErrorFeedback('Error submitting feedback. Please try again.');
+      setErrorFeedback('Error submitting feedback. Please try again.');
+    }
+  };
+
+  const config = {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Accept': 'application/json, text/plain, */*',
+      'Accept-Language': 'it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3',
+      'Accept-Encoding': 'gzip, deflate, br',
+      'Origin': 'http://localhost:3002',
+      'Connection': 'keep-alive',
+      'Referer': 'http://localhost:3002/',
+      'Sec-Fetch-Dest': 'empty',
+      'Sec-Fetch-Mode': 'cors',
+      'Sec-Fetch-Site': 'same-site'
     }
   };
 
   const handlePointOfInterestSubmit = async (e) => {
     e.preventDefault();
     const userData = {
-      commentId:101,
       userName:newPointOfInterest.userName,
       placeName:newPointOfInterest.placeName,
       city:location,
@@ -87,12 +151,7 @@ function WeatherSearchAP() {
     };
     try {
       console.log(userData);
-      const response4 = await axios.post('http://localhost:8080/places/', userData, {
-        headers: {
-          // Overwrite Axios's automatically set Content-Type
-          'Content-Type': 'application/json'
-        }
-      });
+      const response4 = await axios.post('http://localhost:33971/places/', userData, config);
       console.log('Point of interest added:', response4.data);
       // Optionally, you can update state or perform other actions after successful submission
     } catch (error) {
@@ -110,52 +169,68 @@ function WeatherSearchAP() {
     });
   };
 
+  const handleRatingChange = (value) => {
+    setNewPointOfInterest({
+      ...newPointOfInterest,
+      rating: value
+    });
+  };
+
 
   return (
     <div>
       <div>
-        <form className="form-container" onSubmit={handleSubmit}>
+        <div className="form-container" >
           <label className="form-label">
             <input
               className="form-input"
               type="text"
+              list="suggestions"
               value={location}
-              onChange={(e) => setLocation(e.target.value)}
+              onChange={handleInputChange}
+              onKeyDown={() => handleSuggestionClick(location)}
             />
+             <datalist id="suggestions">
+        {suggestions.map((suggestion, index) => (
+          <option key={index} value={suggestion} onClick={() => handleSuggestionClick(suggestion)}/>
+        ))}
+      </datalist>
           </label>
-          <button className="form-submit" type="submit">Search</button>
-        </form>
+          <button className="form-submit" onClick={handleSubmit}>SEARCH</button>  
+        </div>
         {errorWeather && <p>{errorWeather}</p>}
         {weatherData && (
           <div className="weather-container">
-            
             <div className="weather-content">
-              <h1>meteo</h1>
+            {currentDateTime.toLocaleString()}
               <h2>{weatherData.data.name}</h2>
-              <p>Temperature: {weatherData.data.main.temp}</p>
-              <p>Humidity: {weatherData.data.main.humidity}</p>
+              <h3>{Math.round(weatherData.data.main.temp)}°C</h3>
+              <p>Humidity: {weatherData.data.main.humidity}%</p>
             </div>
+            <div className='weather-icon'>
             {weatherData.data.weather.map((item, index) => (
               <div key={index}>
                 <img className="weather-icon" src={"http://openweathermap.org/img/w/" + item.icon + ".png"} alt="Weather Icon" /> 
-                <p>Weather: {item.main}</p>
-                <p>Description: {item.description}</p>
+                <h3>{item.main}</h3>
+                <p><b>{item.description}</b></p>
               </div>
             ))}
+            </div>
           </div>
         )}
       </div>
-      <div>
+      <div className='feedback-container'>
         <form>
           <div className="button-container">
-            <button className="feedback-button" type="button" onClick={(e) => handleFeedbackSubmit(1)}>
+            <button className="feedback-button" type="button" onClick={(e) => handleFeedbackSubmit(true)}>
               <span className="icon"><AiFillLike /></span> 
             </button>
-            <button className="feedback-button" type="button" onClick={(e) => handleFeedbackSubmit(0)}>
+            <button className="feedback-button" type="button" onClick={(e) => handleFeedbackSubmit(false)}>
               <span className="icon"><AiFillDislike /></span>
             </button>
           </div>
         </form>
+        <div className='probabilty-container'>
         {errorFeedback && <p>{errorFeedback}</p>}
         {feedback && (
           <div>
@@ -163,14 +238,15 @@ function WeatherSearchAP() {
             <p>{feedback.message}</p>
           </div>
         )}
-      </div>
-      {errorWeatherProbability && <p>{errorWeatherProbability}</p>}
-        {weatherProbability && (
-          <div>
-              <h2>Service Trust</h2>
-              <h2>{weatherProbability.data}</h2>
-          </div>
-        )}
+        {errorWeatherProbability && <p>{errorWeatherProbability}</p>}
+        {weatherProbability=== 'NaN' ? ( 
+            <p>No probability</p> ) : (
+              <div>
+              <h2>Service Trust: {Math.round(weatherProbability)}%</h2>
+              </div>
+            )}
+        </div>
+        </div>
       <div>
         <h2>Point of Interest</h2>
         <div className="card-container">
@@ -184,7 +260,7 @@ function WeatherSearchAP() {
                   <p className="card-text">{post.userName}</p>
                 </div>
                 <div className="card-body">
-                  <p className="card-text">{post.rating}</p>
+                <StarRatingInput value={post.rating} readOnly/>
                   <p className="card-text">{post.description}</p>
                 </div>
               </div>
@@ -193,7 +269,10 @@ function WeatherSearchAP() {
 
 <div>
 <div className="card" >
-      <h3>Add New Point of Interest</h3>
+  <div className='card-header'>
+     <h3>Add New Point of Interest</h3>
+     </div>
+     
       <form onSubmit={handlePointOfInterestSubmit}>
         <label>
           Place Name:
@@ -216,14 +295,8 @@ function WeatherSearchAP() {
           />
         </label>
         <label>
-          Rating:
-          <input
-            className="form-input"
-            type="text"
-            name="rating"
-            value={newPointOfInterest.rating}
-            onChange={handleChangePointOfInterest}
-          />
+        Rating:
+              <StarRatingInput value={newPointOfInterest.rating} onChange={handleRatingChange} />
         </label>
         <label>
           Description:
@@ -234,7 +307,7 @@ function WeatherSearchAP() {
             onChange={handleChangePointOfInterest}
           />
         </label>
-        <button  className="form-submit"type="submit">Add Point of Interest</button>
+        <button  className="form-submit"type="submit">ADD</button>
       </form>
     </div>
 </div>

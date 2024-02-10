@@ -12,14 +12,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin
 @RestController
 @RequestMapping(value = "/places", method = {RequestMethod.GET, RequestMethod.POST})
 @Slf4j
 public class ControllerPlaces {
     @Autowired
     private PlacesService placesService;
-    @CrossOrigin
+
     @PostMapping("/")
     public ResponseEntity<String> saveComment(@RequestBody Comment comment) {
         log.info("Inside saveComment of PlacesController");
@@ -27,7 +26,6 @@ public class ControllerPlaces {
         return  ResponseEntity.status(HttpStatus.CREATED).body("Comment saved successfully");
     }
 
-    @CrossOrigin
     @GetMapping("/citta/{city}")
     public List<Comment> findCommentByCity(@PathVariable("city") String city) {
         log.info("Inside findCommentByCity of PlacesController");

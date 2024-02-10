@@ -8,8 +8,6 @@ import org.slf4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-
-
 @RestController
 @RequestMapping("/meteo")
 public class MeteoController {
@@ -21,7 +19,6 @@ public class MeteoController {
     }
 
 
-    @CrossOrigin
     @RequestMapping(value = "/{city}", method = RequestMethod.GET)
     public ApiResponse weatherForCity(@PathVariable("city") String city) {
         WeatherMapper weather = weatherService.fetchWeatherByCity(city);

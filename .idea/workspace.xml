@@ -8,20 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="frontend update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/feedbacks.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/feedbacks.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedbacks/src/main/java/com/example/feedbacks/controller/FeedbacksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/src/main/java/com/example/feedbacks/controller/FeedbacksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedbacks/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-service/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-service/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-service/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend-service/src/WeatherSearchAP.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/WeatherSearchAP.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-service/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/controller/MeteoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/controller/MeteoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/places/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/places/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/places/src/main/java/com/weatherwise/places/controller/ControllerPlaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/places/src/main/java/com/weatherwise/places/controller/ControllerPlaces.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-registry/src/main/java/com/weatherwise/serverregistry/ServerRegistryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-registry/src/main/java/com/weatherwise/serverregistry/ServerRegistryApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

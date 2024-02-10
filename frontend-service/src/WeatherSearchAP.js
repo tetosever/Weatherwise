@@ -28,6 +28,10 @@ function WeatherSearchAP() {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
   const [suggestions, setSuggestions] = useState([]);
 
+  const headers = {
+    'Content-Type': 'text/plain'
+  };
+
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -107,7 +111,7 @@ function WeatherSearchAP() {
   const handleFeedbackSubmit = async (value) => {
     try {
       console.log({id: location, rating: value});
-      const response3 = await axios.post('http://localhost:8080/feedbacks/', {
+      const response3 = await axios.post('http://localhost:44885/feedbacks/', {
         id: location,
         rating: value
       });
@@ -118,6 +122,21 @@ function WeatherSearchAP() {
       console.error('Error submitting feedback:', error);
       setFeedback(null);
       setErrorFeedback('Error submitting feedback. Please try again.');
+    }
+  };
+
+  const config = {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Accept': 'application/json, text/plain, */*',
+      'Accept-Language': 'it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3',
+      'Accept-Encoding': 'gzip, deflate, br',
+      'Origin': 'http://localhost:3002',
+      'Connection': 'keep-alive',
+      'Referer': 'http://localhost:3002/',
+      'Sec-Fetch-Dest': 'empty',
+      'Sec-Fetch-Mode': 'cors',
+      'Sec-Fetch-Site': 'same-site'
     }
   };
 
@@ -132,7 +151,7 @@ function WeatherSearchAP() {
     };
     try {
       console.log(userData);
-      const response4 = await axios.post('http://localhost:8080/places/', userData);
+      const response4 = await axios.post('http://localhost:33971/places/', userData, config);
       console.log('Point of interest added:', response4.data);
       // Optionally, you can update state or perform other actions after successful submission
     } catch (error) {

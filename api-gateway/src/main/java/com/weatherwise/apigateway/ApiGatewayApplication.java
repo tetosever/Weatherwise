@@ -32,4 +32,5 @@ public class ApiGatewayApplication {
 		return new CorsWebFilter(source);
 	}
 
+
 }

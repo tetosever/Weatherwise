@@ -2,21 +2,16 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './index.css';
 import { AiFillLike, AiFillDislike } from "react-icons/ai";
-import Button from 'react-bootstrap/Button';
 import StarRatingInput from './StarRatingInput';
 
 function WeatherSearchAP() {
-  const [location, setLocation] = useState('Bergamo');
+  const [location, setLocation] = useState('');
   const [weatherData, setWeatherData] = useState(null);
-  const [cityImageURL, setCityImageURL] = useState('');
-  const [errorWeather, setErrorWeather] = useState(null);
+  const [errorWeather, setErrorWeather] = useState('');
   const [errorFeedback, setErrorFeedback] = useState(null);
-  const [errorCityImage, setErrorCityImage] = useState(null)
-  const [errorPlaces, setErrorPlaces] = useState(null);
-  const [errorWeatherProbability, setErrorWeatherProbability] = useState(null);
   const [posts, setPosts] = useState([]);
   const [weatherProbability, setWeatherProbability] = useState(null);
-  const [feedback, setFeedback] = useState(null);
+  const [feedback, setFeedback] = useState('');
   const [newPointOfInterest, setNewPointOfInterest] = useState({
     userName: '',
     placeName: '',
@@ -28,16 +23,11 @@ function WeatherSearchAP() {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
   const [suggestions, setSuggestions] = useState([]);
 
-  const headers = {
-    'Content-Type': 'text/plain'
-  };
-
-
+  
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentDateTime(new Date());
     }, 1000);
-
     // Cleanup function to clear the interval when the component unmounts
     return () => clearInterval(intervalId);
   }, []); // Empty dependency array ensures the effect runs only once after initial render
@@ -63,7 +53,7 @@ function WeatherSearchAP() {
 
   const handleSuggestionClick = (value) => {
     setLocation(value); // Set location based on the suggestion clicked
-    handleSubmit(); // Fetch weather data based on the selected location
+     handleSubmit();// Fetch weather data based on the selected location
   };
 
 
@@ -83,40 +73,40 @@ function WeatherSearchAP() {
     try {
       const response2 = await axios.get(`http://localhost:8080/places/citta/${location}`);
       setPosts(response2.data);
-      setErrorPlaces(null);
     } catch (error) {
       console.error('Error fetching point of interest:', error);
-      setErrorPlaces('Error fetching location data. Please try again later.');
       setPosts([]);
     }
 
     try {
       const response4 = await axios.get(`http://localhost:8080/feedbacks/citta/${location}`);
       setWeatherProbability(response4.data);
-      setErrorWeatherProbability(null);
     } catch (error) {
       console.error('Error fetching weather probability:', error);
-      setErrorWeatherProbability('Error fetching probability. Please try again later.');
+      setWeatherProbability(null);
     }
-
-
-  
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
-    handleSubmit();
-  }, []); // Empty dependency array ensures this effect runs only once
-
+      // This function will be invoked only once when the component mounts
+      console.log('Component mounted');
+      setLocation('Bergamo');
+      handleSubmit();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []); // Empty dependency array ensures the effect runs only once
   
+
   const handleFeedbackSubmit = async (value) => {
     try {
       console.log({id: location, rating: value});
       const response3 = await axios.post('http://localhost:8080/feedbacks/', {
-        id: location,
+        city: location,
         rating: value
       });
       setFeedback(response3.data);
       setErrorFeedback(null);
+      handleSubmit();
       console.log('Feedback submitted:', response3.data);
     } catch (error) {
       console.error('Error submitting feedback:', error);
@@ -125,12 +115,7 @@ function WeatherSearchAP() {
     }
   };
 
-  const config = {
-    headers: {
-      'Accept': 'application/json, text/plain, */*',
-      'Content-Type': 'application/json'
-    }
-  };
+ 
 
 
   const handlePointOfInterestSubmit = async (e) => {
@@ -144,9 +129,17 @@ function WeatherSearchAP() {
     };
     try {
       console.log(userData);
-      const response4 = await axios.post('http://localhost:8080/places/', userData, config);
+      const response4 = await axios.post('http://localhost:8080/places/', userData);
       console.log('Point of interest added:', response4.data);
-      // Optionally, you can update state or perform other actions after successful submission
+      setNewPointOfInterest({
+        userName: '',
+        placeName: '',
+        description: '',
+        rating: 0
+      });
+      setLocation(location);
+      // Reload the page
+      handleSubmit();
     } catch (error) {
       console.error('Error adding point of interest:', error);
       // Handle error
@@ -181,7 +174,6 @@ function WeatherSearchAP() {
               list="suggestions"
               value={location}
               onChange={handleInputChange}
-              onKeyDown={() => handleSuggestionClick(location)}
             />
              <datalist id="suggestions">
         {suggestions.map((suggestion, index) => (
@@ -227,13 +219,13 @@ function WeatherSearchAP() {
         {errorFeedback && <p>{errorFeedback}</p>}
         {feedback && (
           <div>
-            <h3>Saved Successfully</h3>
+            <h2>Saved Successfully</h2>
             <p>{feedback.message}</p>
           </div>
         )}
-        {errorWeatherProbability && <p>{errorWeatherProbability}</p>}
-        {weatherProbability=== 'NaN' ? ( 
-            <p>No probability</p> ) : (
+
+        {weatherProbability === 'NaN' || weatherProbability === null  ? ( 
+            <p>No Weather Probability </p> ) : (
               <div>
               <h2>Service Trust: {Math.round(weatherProbability)}%</h2>
               </div>
@@ -260,6 +252,8 @@ function WeatherSearchAP() {
             ))
           )}
 
+
+{location && 
 <div>
 <div className="card" >
   <div className='card-header'>
@@ -304,7 +298,7 @@ function WeatherSearchAP() {
       </form>
     </div>
 </div>
-
+}
         </div>
       </div>
 

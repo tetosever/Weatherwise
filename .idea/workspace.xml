@@ -8,18 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="frontend update">
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/weatherwise/apigateway/config/CorsConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/weatherwise/apigateway/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/weatherwise/apigateway/ApiGatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/weatherwise/apigateway/controller/FallBackController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/weatherwise/apigateway/controller/FallBackController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedbacks/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedbacks/src/main/java/com/example/feedbacks/controller/FeedbacksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/src/main/java/com/example/feedbacks/controller/FeedbacksController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedbacks/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-service/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-service/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend-service/src/WeatherSearchAP.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/WeatherSearchAP.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/controller/MeteoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/meteo/src/main/java/com/weatherwise/meteo/controller/MeteoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/places/src/main/java/com/weatherwise/places/controller/ControllerPlaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/places/src/main/java/com/weatherwise/places/controller/ControllerPlaces.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-registry/src/main/java/com/weatherwise/serverregistry/ServerRegistryApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-registry/src/main/java/com/weatherwise/serverregistry/ServerRegistryApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-registry/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server-registry/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +134,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
+  <component name="RunManager" selected="Spring Boot.FeedbacksApplication">
     <configuration name="All in places" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="places" />
       <option name="PACKAGE_NAME" value="" />
@@ -257,6 +252,17 @@
     <MESSAGE value="fix bug" />
     <MESSAGE value="frontend update" />
     <option name="LAST_COMMIT_MESSAGE" value="frontend update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server-registry/src/main/java/com/weatherwise/serverregistry/ServerRegistryApplication.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

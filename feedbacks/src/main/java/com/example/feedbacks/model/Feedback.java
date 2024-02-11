@@ -11,5 +11,5 @@ public class Feedback {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="feedback_SEQ")
     private Long feedbackId;
     private String city;
-    private boolean isLike;
+    private int isLike;
 }

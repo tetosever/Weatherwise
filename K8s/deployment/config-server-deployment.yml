@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: config-server-app
-          image: matteosevergninistudent/weatherwise:config-server-v0.0.1
+          image: matteosevergninistudent/config-server
           imagePullPolicy: Always
           ports:
             - containerPort: 9296

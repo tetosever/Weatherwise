@@ -15,6 +15,13 @@ spec:
                 name: frontend-service
                 port:
                   number: 80
+          - path: /feedbacks
+            pathType: Prefix
+            backend:
+              service:
+                name: feedbacks-service
+                port:
+                  number: 80
 
 
 

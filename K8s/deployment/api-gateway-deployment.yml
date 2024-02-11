@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: api-gateway-app
-          image: matteosevergninistudent/weatherwise:api-gateway-v0.0.1
+          image: matteosevergninistudent/api-gateway
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

@@ -20,3 +20,9 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8081
+          env:
+            - name: SPRING_CONFIG_IMPORT
+              valueFrom:
+                configMapKeyRef:
+                  name: meteo-config
+                  key: SPRING_CONFIG_IMPORT

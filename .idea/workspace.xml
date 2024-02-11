@@ -7,11 +7,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="First part of K8, frontend fix">
+    <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="add k8s configuration for mysql">
+      <change afterPath="$PROJECT_DIR$/K8s/configMap/meteo-configmap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application-local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application-prod.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cities/src/main/resources/application-local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cities/src/main/resources/application-prod.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/application-local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/application-prod.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/local/api-gateway.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/local/cities.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/local/feedbacks.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/local/meteo.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/local/places.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/local/server-registry.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/api-gateway.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/cities.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/feedbacks.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/meteo.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/places.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/server-registry.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feedbacks/src/main/resources/application-local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feedbacks/src/main/resources/application-prod.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/meteo/src/main/resources/application-local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/meteo/src/main/resources/application-prod.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/places/src/main/resources/application-local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/places/src/main/resources/application-prod.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-registry/src/main/resources/application-local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server-registry/src/main/resources/application-prod.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/services/feedbacks-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/services/feedbacks-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/deployment/meteo-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/deployment/meteo-deployment.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/K8s/services/meteo-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/services/meteo-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-service/src/WeatherSearchAP.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/WeatherSearchAP.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cities/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cities/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/api-gateway.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/api-gateway.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/cities.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/cities.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/feedbacks.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/feedbacks.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/meteo.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/meteo.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/places.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/places.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedbacks/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meteo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/meteo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/places/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/places/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server-registry/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server-registry/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +63,8 @@
         <option value="Dockerfile" />
         <option value="Kubernetes Deployment" />
         <option value="Class" />
+        <option value="Kubernetes Pod" />
+        <option value="Kubernetes Service" />
       </list>
     </option>
   </component>
@@ -89,7 +130,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Admin/OneDrive/Desktop/Universita/WeatherWise/cities",
+    "last_opened_file_path": "/Users/tetosever/Desktop/Cloud Projects/WeatherWise/api-gateway/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -114,9 +155,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Admin\OneDrive\Desktop\Universita\WeatherWise\meteo\src\main\java\com\weatherwise\meteo" />
+      <recent name="$PROJECT_DIR$/api-gateway/src/main/resources" />
+      <recent name="$PROJECT_DIR$/cities/src/main/resources" />
+      <recent name="$PROJECT_DIR$/feedbacks/src/main/resources" />
+      <recent name="$PROJECT_DIR$/meteo/src/main/resources" />
+      <recent name="$PROJECT_DIR$/places/src/main/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config-server/src/main/resources/configurations" />
       <recent name="C:\Users\matti\Desktop\WeatherWise\api-gateway" />
       <recent name="C:\Users\matti\Desktop\WeatherWise\config-server\src\main\resources" />
     </key>
@@ -135,7 +181,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
+  <component name="RunManager" selected="Spring Boot.ServerRegistryApplication">
     <configuration name="All in places" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="places" />
       <option name="PACKAGE_NAME" value="" />
@@ -145,6 +191,7 @@
       </method>
     </configuration>
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="local" />
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.weatherwise.apigateway.ApiGatewayApplication" />
       <method v="2">
@@ -152,6 +199,7 @@
       </method>
     </configuration>
     <configuration name="CitiesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" value="local" />
       <module name="cities" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.weatherwise.cities.CitiesApplication" />
       <method v="2">
@@ -159,6 +207,7 @@
       </method>
     </configuration>
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="native,local" />
       <module name="config-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.weatherwise.configserver.ConfigServerApplication" />
       <method v="2">
@@ -166,6 +215,7 @@
       </method>
     </configuration>
     <configuration name="FeedbacksApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" value="local" />
       <module name="feedbacks" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.feedbacks.FeedbacksApplication" />
       <method v="2">
@@ -173,6 +223,7 @@
       </method>
     </configuration>
     <configuration name="MeteoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="local" />
       <module name="meteo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.weatherwise.meteo.MeteoApplication" />
       <extension name="coverage">
@@ -186,6 +237,7 @@
       </method>
     </configuration>
     <configuration name="PlacesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" value="local" />
       <module name="places" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.weatherwise.places.PlacesApplication" />
       <method v="2">
@@ -193,6 +245,7 @@
       </method>
     </configuration>
     <configuration name="ServerRegistryApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="local" />
       <module name="server-registry" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.weatherwise.serverregistry.ServerRegistryApplication" />
       <method v="2">
@@ -288,7 +341,8 @@
     <MESSAGE value="frontend update" />
     <MESSAGE value="FrontEnd - Fix First Loading and build issue" />
     <MESSAGE value="First part of K8, frontend fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="First part of K8, frontend fix" />
+    <MESSAGE value="add k8s configuration for mysql" />
+    <option name="LAST_COMMIT_MESSAGE" value="add k8s configuration for mysql" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

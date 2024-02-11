@@ -3,4 +3,5 @@ WORKDIR /weatherwise
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} /weatherwise/config-server.jar
 EXPOSE 9296
-ENTRYPOINT ["java","-jar","/weatherwise/config-server.jar"]
+ENV SPRING_PROFILES_ACTIVE=default
+ENTRYPOINT ["sh", "-c", "java -Dspring.profiles.active=${SPRING_PROFILES_ACTIVE} -jar /weatherwise/config-server.jar"]

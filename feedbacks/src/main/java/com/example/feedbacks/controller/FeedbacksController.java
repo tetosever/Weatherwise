@@ -31,27 +31,27 @@ public class FeedbacksController {
     public String initDb(){
         Feedback feedback = new Feedback();
         feedback.setCity("bergamo");
-        feedback.setLike(true);
+        feedback.setIsLike(0);
         feedbacksService.saveFeedbacks(feedback);
         feedback = new Feedback();
         feedback.setCity("bergamo");
-        feedback.setLike(true);
+        feedback.setIsLike(1);
         feedbacksService.saveFeedbacks(feedback);
         feedback = new Feedback();
         feedback.setCity("bergamo");
-        feedback.setLike(true);
+        feedback.setIsLike(1);
         feedbacksService.saveFeedbacks(feedback);
         feedback = new Feedback();
         feedback.setCity("bergamo");
-        feedback.setLike(true);
+        feedback.setIsLike(1);
         feedbacksService.saveFeedbacks(feedback);
         feedback = new Feedback();
         feedback.setCity("bergamo");
-        feedback.setLike(true);
+        feedback.setIsLike(1);
         feedbacksService.saveFeedbacks(feedback);
         feedback = new Feedback();
         feedback.setCity("bergamo");
-        feedback.setLike(false);
+        feedback.setIsLike(1);
         feedbacksService.saveFeedbacks(feedback);
         return "DB Initialized";
     }

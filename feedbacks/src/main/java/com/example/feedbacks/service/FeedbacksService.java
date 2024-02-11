@@ -24,9 +24,11 @@ public class FeedbacksService {
     public float percentageLikeOfCity(String city) {
         log.info("Inside findFeedbackByCity of FeedbacksController");
         List<Feedback> feedbacks = feedbacksRepository.findByCityIgnoreCase(city);
+        int all = feedbacks.size();
         int likes = 0;
         for (Feedback feedback : feedbacks) {
-            if (feedback.isLike()) {
+           feedback.getIsLike();
+            if (feedback.getIsLike() == 1) {
                 likes++;
             }
         }

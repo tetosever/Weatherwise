@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: places-service-app
-          image: matteosevergninistudent/weatherwise:places-v0.0.1
+          image: matteosevergninistudent/places
           imagePullPolicy: Always
           ports:
             - containerPort: 8083 #port of app meteo, same of dockerfile

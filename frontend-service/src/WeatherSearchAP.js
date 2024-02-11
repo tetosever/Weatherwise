@@ -3,11 +3,12 @@ import axios from 'axios';
 import './index.css';
 import { AiFillLike, AiFillDislike } from "react-icons/ai";
 import StarRatingInput from './StarRatingInput';
+import { flushSync } from 'react-dom';
 
 function WeatherSearchAP() {
   const [location, setLocation] = useState('');
   const [weatherData, setWeatherData] = useState(null);
-  const [errorWeather, setErrorWeather] = useState('');
+  
   const [errorFeedback, setErrorFeedback] = useState(null);
   const [posts, setPosts] = useState([]);
   const [weatherProbability, setWeatherProbability] = useState(null);
@@ -59,17 +60,27 @@ function WeatherSearchAP() {
      handleSubmit();// Fetch weather data based on the selected location
   };
 
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(() => {
+  // This function will be invoked only once when the component mounts
+  console.log('Component mounted');
+  flushSync(() => {
+    setLocation("Bergamo");
+  });
+  console.log(location);
+  handleSubmit();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+}, []); // Empty dependency array ensures the effect runs only once
   
   // Fetch weather and point of interest data
   const handleSubmit = async (event = null) => {
     try {
       const response1 = await axios.get(`http://localhost:8080/meteo/${location}`);
       setWeatherData(response1.data);
-      setErrorWeather(null);
+     
     } catch (error) {
       console.error('Error fetching weather:', error);
-      setErrorWeather('Error fetching weather. Please try again later.');
+    
       setWeatherData(null);
     }
 
@@ -88,16 +99,19 @@ function WeatherSearchAP() {
       console.error('Error fetching weather probability:', error);
       setWeatherProbability(null);
     }
+
+    try {
+      const response = await axios.get(
+        `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(location)}&key=YOUR_GOOGLE_MAPS_API_KEY`
+      );
+      const { lat, lng } = response.data.results[0].geometry.location;
+      setLocation({ lat, lng });
+    } catch (error) {
+      console.error('Error fetching location:', error);
+    }
   };
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => {
-      // This function will be invoked only once when the component mounts
-      console.log('Component mounted');
-      setLocation('Bergamo');
-      handleSubmit();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []); // Empty dependency array ensures the effect runs only once
+  
   
 
   const handleFeedbackSubmit = async (value) => {
@@ -105,7 +119,7 @@ function WeatherSearchAP() {
       console.log({id: location, rating: value});
       const response3 = await axios.post('http://localhost:8080/feedbacks/', {
         city: location,
-        rating: value
+        isLike: Number(value)
       });
       setFeedback(response3.data);
       setErrorFeedback(null);
@@ -177,45 +191,50 @@ function WeatherSearchAP() {
               list="suggestions"
               value={location}
               onChange={handleInputChange}
+              defaultValue="Bergamo" 
             />
+            </label>
   {  suggestions && suggestions.length > 0 && (
-  <datalist id="suggestions">
+   <datalist id="suggestions">v
     { suggestions.map((suggestion, index) => (
       <option key={index} value={suggestion.name} onClick={() => handleSuggestionClick(suggestion.name)} />
     ))}
   </datalist>
 )}
-          </label>
+
+         
           <button className="form-submit" onClick={handleSubmit}>SEARCH</button>  
         </div>
-        {errorWeather && <p>{errorWeather}</p>}
-        {weatherData && (
-          <div className="weather-container">
-            <div className="weather-content">
-            {currentDateTime.toLocaleString()}
-              <h2>{weatherData.data.name}</h2>
-              <h3>{Math.round(weatherData.data.main.temp)}°C</h3>
-              <p>Humidity: {weatherData.data.main.humidity}%</p>
-            </div>
-            <div className='weather-icon'>
-            {weatherData.data.weather.map((item, index) => (
-              <div key={index}>
-                <img className="weather-icon" src={"http://openweathermap.org/img/w/" + item.icon + ".png"} alt="Weather Icon" /> 
-                <h3>{item.main}</h3>
-                <p><b>{item.description}</b></p>
-              </div>
-            ))}
-            </div>
-          </div>
-        )}
+
+        {weatherData ? (
+  <div className="weather-container">
+    <div className="weather-content">
+      {currentDateTime.toLocaleString()}
+      <h2>{weatherData.data.name}</h2>
+      <h3>{Math.round(weatherData.data.main.temp)}°C</h3>
+      <p>Humidity: {weatherData.data.main.humidity}%</p>
+    </div>
+    <div className='weather-icon'>
+      {weatherData.data.weather.map((item, index) => (
+        <div key={index}>
+          <img className="weather-icon" src={"http://openweathermap.org/img/w/" + item.icon + ".png"} alt="Weather Icon" /> 
+          <h3>{item.main}</h3>
+          <p><b>{item.description}</b></p>
+        </div>
+      ))}
+    </div>
+  </div>
+) : (
+  <div>No weather data available</div>
+)}
       </div>
       <div className='feedback-container'>
         <form>
           <div className="button-container">
-            <button className="feedback-button" type="button" onClick={(e) => handleFeedbackSubmit(true)}>
+            <button className="feedback-button" type="button" onClick={(e) => handleFeedbackSubmit(1)}>
               <span className="icon"><AiFillLike /></span> 
             </button>
-            <button className="feedback-button" type="button" onClick={(e) => handleFeedbackSubmit(false)}>
+            <button className="feedback-button" type="button" onClick={(e) => handleFeedbackSubmit(0)}>
               <span className="icon"><AiFillDislike /></span>
             </button>
           </div>

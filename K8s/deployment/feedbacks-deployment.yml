@@ -16,7 +16,15 @@ spec:
     spec:
       containers:
         - name: feedbacks-service-app
-          image: matteosevergninistudent/weatherwise:feedbacks-v0.0.1
+          image: matteosevergninistudent/feedbacks
           imagePullPolicy: Always
           ports:
             - containerPort: 8082
+          env:
+            - name: POSTGRES_HOST   # Setting Database host address
+              value: postgresql-service
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgresql-secret
+                  key: password

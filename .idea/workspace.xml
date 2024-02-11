@@ -7,13 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="FrontEnd - Fix First Loading and build issue">
+    <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="First part of K8, frontend fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/weatherwise/apigateway/config/CorsConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cities/src/main/java/com/weatherwise/cities/controller/CitiesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cities/src/main/java/com/weatherwise/cities/controller/CitiesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedbacks/src/main/java/com/example/feedbacks/controller/FeedbacksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/src/main/java/com/example/feedbacks/controller/FeedbacksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/services/feedbacks-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/services/feedbacks-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/services/meteo-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/services/meteo-service.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend-service/src/WeatherSearchAP.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/WeatherSearchAP.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/places/src/main/java/com/weatherwise/places/controller/ControllerPlaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/places/src/main/java/com/weatherwise/places/controller/ControllerPlaces.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +80,7 @@
     "Spring Boot.ApiGatewayApplication.executor": "Run",
     "Spring Boot.CitiesApplication.executor": "Run",
     "Spring Boot.ConfigServerApplication.executor": "Run",
-    "Spring Boot.FeedbacksApplication.executor": "Debug",
+    "Spring Boot.FeedbacksApplication.executor": "Run",
     "Spring Boot.MeteoApplication.executor": "Run",
     "Spring Boot.PlacesApplication (1).executor": "Run",
     "Spring Boot.PlacesApplication.executor": "Run",
@@ -260,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707593639616</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="First part of K8, frontend fix">
+      <option name="closed" value="true" />
+      <created>1707680764087</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707680764087</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +287,8 @@
     <MESSAGE value="fix bug" />
     <MESSAGE value="frontend update" />
     <MESSAGE value="FrontEnd - Fix First Loading and build issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="FrontEnd - Fix First Loading and build issue" />
+    <MESSAGE value="First part of K8, frontend fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="First part of K8, frontend fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

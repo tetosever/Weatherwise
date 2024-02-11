@@ -1,11 +1,11 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: feedbacks-service-svc
+  name: feedbacks-service
 spec:
   selector:
     app: feedbacks-service-app
-  #type: LoadBalancer | ClusterIP | NodePort
+  type: ClusterIP 
   ports:
     - port: 80
       targetPort: 8082

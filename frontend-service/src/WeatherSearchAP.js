@@ -35,9 +35,12 @@ function WeatherSearchAP() {
 
     const fetchSuggestions = async () => {
       try {
-        //const response = await axios.get(`http://localhost:8080/cities/${location}`);
-        const response = ['Bergamo', 'Bormio','Milano','Paris', 'London', 'Tokyo'];
-        setSuggestions(response);
+        const response = await axios.get(`http://localhost:8080/cities/${location}`);
+        //const response = ['Bergamo', 'Bormio','Milano','Paris', 'London', 'Tokyo'];
+
+        console.log(location);
+        console.log(response.data.data.geonames);
+        setSuggestions(response.data.data.geonames);
       } catch (error) {
         console.error('Error fetching suggestions:', error);
         setSuggestions([]);
@@ -71,7 +74,7 @@ function WeatherSearchAP() {
     }
 
     try {
-      const response2 = await axios.get(`http://localhost:8080/places/citta/${location}`);
+      const response2 = await axios.get(`http://localhost:8080/places/cities/${location}`);
       setPosts(response2.data);
     } catch (error) {
       console.error('Error fetching point of interest:', error);
@@ -79,7 +82,7 @@ function WeatherSearchAP() {
     }
 
     try {
-      const response4 = await axios.get(`http://localhost:8080/feedbacks/citta/${location}`);
+      const response4 = await axios.get(`http://localhost:8080/feedbacks/percentage/${location}`);
       setWeatherProbability(response4.data);
     } catch (error) {
       console.error('Error fetching weather probability:', error);
@@ -175,11 +178,13 @@ function WeatherSearchAP() {
               value={location}
               onChange={handleInputChange}
             />
-             <datalist id="suggestions">
-        {suggestions.map((suggestion, index) => (
-          <option key={index} value={suggestion} onClick={() => handleSuggestionClick(suggestion)}/>
-        ))}
-      </datalist>
+  {  suggestions && suggestions.length > 0 && (
+  <datalist id="suggestions">
+    { suggestions.map((suggestion, index) => (
+      <option key={index} value={suggestion.name} onClick={() => handleSuggestionClick(suggestion.name)} />
+    ))}
+  </datalist>
+)}
           </label>
           <button className="form-submit" onClick={handleSubmit}>SEARCH</button>  
         </div>

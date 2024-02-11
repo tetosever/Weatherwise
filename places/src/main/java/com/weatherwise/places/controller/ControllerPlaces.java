@@ -26,7 +26,7 @@ public class ControllerPlaces {
         return  ResponseEntity.status(HttpStatus.CREATED).body("Comment saved successfully");
     }
 
-    @CrossOrigin
+
     @GetMapping("/cities/{city}")
     public List<Comment> findCommentByCity(@PathVariable("city") String city) {
         log.info("Inside findCommentByCity of PlacesController");

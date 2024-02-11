@@ -18,7 +18,7 @@ public class CitiesController {
         this.citiesService = citiesService;
     }
 
-    @CrossOrigin
+
     @RequestMapping(value = "/{prefix}", method = RequestMethod.GET)
     public ApiResponse getCitiesByPrefix(@PathVariable String prefix) {
         CityMapper cityMapper = citiesService.retriveCityBYPrefix(prefix);

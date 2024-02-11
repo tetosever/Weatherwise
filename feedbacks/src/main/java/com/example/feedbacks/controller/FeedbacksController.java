@@ -21,7 +21,7 @@ public class FeedbacksController {
         feedbacksService.saveFeedbacks(feedback);
         return  ResponseEntity.status(HttpStatus.CREATED).body("Comment saved successfully");
     }
-    @CrossOrigin
+
     @GetMapping("/percentage/{city}")
     public  float retriveFeedbackByCity(@PathVariable("city") String city) {
         return feedbacksService.percentageLikeOfCity(city);

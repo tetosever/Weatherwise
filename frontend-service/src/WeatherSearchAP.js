@@ -3,6 +3,7 @@ import axios from 'axios';
 import './index.css';
 import { AiFillLike, AiFillDislike } from "react-icons/ai";
 import StarRatingInput from './StarRatingInput';
+import { flushSync } from 'react-dom';
 
 function WeatherSearchAP() {
   const [location, setLocation] = useState('');
@@ -59,7 +60,17 @@ function WeatherSearchAP() {
      handleSubmit();// Fetch weather data based on the selected location
   };
 
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(() => {
+  // This function will be invoked only once when the component mounts
+  console.log('Component mounted');
+  flushSync(() => {
+    setLocation("Bergamo");
+  });
+  console.log(location);
+  handleSubmit();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+}, []); // Empty dependency array ensures the effect runs only once
   
   // Fetch weather and point of interest data
   const handleSubmit = async (event = null) => {
@@ -88,18 +99,19 @@ function WeatherSearchAP() {
       console.error('Error fetching weather probability:', error);
       setWeatherProbability(null);
     }
+
+    try {
+      const response = await axios.get(
+        `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(location)}&key=YOUR_GOOGLE_MAPS_API_KEY`
+      );
+      const { lat, lng } = response.data.results[0].geometry.location;
+      setLocation({ lat, lng });
+    } catch (error) {
+      console.error('Error fetching location:', error);
+    }
   };
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => {
-      // This function will be invoked only once when the component mounts
-      console.log('Component mounted');
-      handleSubmit();
-      setLocation("Bergamo");
-      console.log(location);
-      handleSubmit();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []); // Empty dependency array ensures the effect runs only once
+  
   
 
   const handleFeedbackSubmit = async (value) => {
@@ -179,6 +191,7 @@ function WeatherSearchAP() {
               list="suggestions"
               value={location}
               onChange={handleInputChange}
+              defaultValue="Bergamo" 
             />
             </label>
   {  suggestions && suggestions.length > 0 && (

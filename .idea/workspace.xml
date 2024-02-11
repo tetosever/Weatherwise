@@ -7,19 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="FrontEnd - Fix First Loading and build issue">
+    <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="First part of K8, frontend fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/deployment/api-gateway-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/deployment/api-gateway-deployment.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/deployment/config-server-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/deployment/config-server-deployment.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/deployment/feedbacks-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/deployment/feedbacks-deployment.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/deployment/frontend-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/deployment/frontend-deployment.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/deployment/meteo-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/deployment/meteo-deployment.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/deployment/places-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/deployment/places-deployment.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/ingress/ingress.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/ingress/ingress.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/K8s/services/feedbacks-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/services/feedbacks-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/services/frontend-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/services/frontend-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/services/frontend-serviceCIP.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/services/frontend-serviceCIP.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/feedbacks.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/feedbacks.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/services/meteo-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/services/meteo-service.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend-service/src/WeatherSearchAP.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/WeatherSearchAP.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -267,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707593639616</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="First part of K8, frontend fix">
+      <option name="closed" value="true" />
+      <created>1707680764087</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707680764087</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +287,8 @@
     <MESSAGE value="fix bug" />
     <MESSAGE value="frontend update" />
     <MESSAGE value="FrontEnd - Fix First Loading and build issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="FrontEnd - Fix First Loading and build issue" />
+    <MESSAGE value="First part of K8, frontend fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="First part of K8, frontend fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

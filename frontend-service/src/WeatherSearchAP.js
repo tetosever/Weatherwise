@@ -36,6 +36,7 @@ function WeatherSearchAP() {
 
     const fetchSuggestions = async () => {
       try {
+        // ${window.__RUNTIME_CONFIG__.GATWAY_SERVICE_API}
         const response = await axios.get(`http://localhost:8080/cities/${location}`);
         //const response = ['Bergamo', 'Bormio','Milano','Paris', 'London', 'Tokyo'];
 
@@ -100,15 +101,7 @@ useEffect(() => {
       setWeatherProbability(null);
     }
 
-    try {
-      const response = await axios.get(
-        `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(location)}&key=YOUR_GOOGLE_MAPS_API_KEY`
-      );
-      const { lat, lng } = response.data.results[0].geometry.location;
-      setLocation({ lat, lng });
-    } catch (error) {
-      console.error('Error fetching location:', error);
-    }
+   
   };
 
   

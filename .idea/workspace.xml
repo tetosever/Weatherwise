@@ -7,9 +7,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="fix deploy problem">
+    <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="Fix MySql DB init and frontend structure">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/K8s/deployment/cities-deployment.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/K8s/pvc/postgresql.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/K8s/secret/postgresql.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/K8s/services/cities-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/K8s/services/postgresql.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/K8s/services/postgresqlNP.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/K8s/statefulsets/postgresql.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/prod/configMap/meteo-configmap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/configMap/meteo-configmap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/local/places.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/local/places.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/places.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/places.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-service/src/FeedbackForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-service/src/InterestPoint.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-service/src/MyForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-service/src/WeatherSearch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-service/src/WeatherSearchAP.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-service/src/WeatherSearchAP.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-service/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/places/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/places/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/places/src/main/resources/db/V1__Create_table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/places/src/main/resources/db/V1__Create_table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/places/src/main/resources/db/V2__Insert_default_data.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +75,13 @@
 }</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="enabledProfiles">
+      <list>
+        <option value="nativeTest" />
+      </list>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -254,7 +280,7 @@
       <workItem from="1707352708797" duration="5836000" />
       <workItem from="1707469820823" duration="4407000" />
       <workItem from="1707581334423" duration="12539000" />
-      <workItem from="1707736150808" duration="2518000" />
+      <workItem from="1707736150808" duration="372000" />
     </task>
     <task id="LOCAL-00001" summary="FrontEnd - Fix First Loading and build issue">
       <option name="closed" value="true" />
@@ -304,15 +330,7 @@
       <option name="project" value="LOCAL" />
       <updated>1707702629752</updated>
     </task>
-    <task id="LOCAL-00007" summary="fix deploy problem">
-      <option name="closed" value="true" />
-      <created>1707737328553</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1707737328553</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,8 +358,8 @@
     <MESSAGE value="fixed config-server and meteo kube files and updated properties in config server" />
     <MESSAGE value="fixed properties for connection of kube services" />
     <MESSAGE value="test to fix problem of config server in kubernetes" />
-    <MESSAGE value="fix deploy problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix deploy problem" />
+    <MESSAGE value="Fix MySql DB init and frontend structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix MySql DB init and frontend structure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

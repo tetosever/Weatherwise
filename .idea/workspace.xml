@@ -7,50 +7,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="add k8s configuration for mysql">
-      <change afterPath="$PROJECT_DIR$/K8s/configMap/meteo-configmap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application-local.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application-prod.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cities/src/main/resources/application-local.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cities/src/main/resources/application-prod.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/application-local.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/application-prod.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/local/api-gateway.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/local/cities.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/local/feedbacks.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/local/meteo.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/local/places.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/local/server-registry.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/api-gateway.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/cities.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/feedbacks.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/meteo.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/places.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/server-registry.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feedbacks/src/main/resources/application-local.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feedbacks/src/main/resources/application-prod.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meteo/src/main/resources/application-local.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/meteo/src/main/resources/application-prod.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/places/src/main/resources/application-local.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/places/src/main/resources/application-prod.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-registry/src/main/resources/application-local.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-registry/src/main/resources/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+    <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="fixed conflict and merge from remote">
+      <change afterPath="$PROJECT_DIR$/K8s/prod/configMap/config-server-configmap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/K8s/prod/secrets/config-server-secrets.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/deployment/meteo-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/deployment/meteo-deployment.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/services/meteo-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/services/meteo-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cities/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cities/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/api-gateway.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/api-gateway.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/cities.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/cities.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/feedbacks.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/feedbacks.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/meteo.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/meteo.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/places.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/places.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedbacks/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/feedbacks/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meteo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/meteo/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/places/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/places/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-registry/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server-registry/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/configMap/meteo-configmap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/configMap/meteo-configmap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/configMap/server-registry-configmap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/configMap/server-registry-configmap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/deployment/api-gateway-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/deployment/api-gateway-deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/deployment/config-server-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/deployment/config-server-deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/deployment/feedbacks-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/deployment/feedbacks-deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/deployment/frontend-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/deployment/frontend-deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/deployment/meteo-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/deployment/meteo-deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/deployment/places-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/deployment/places-deployment.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/ingress/ingress.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/ingress/ingress.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/pvc/mysql-pvc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/pvc/mysql-pvc.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/secrets/mysql-secret.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/secrets/mysql-secret.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/services/api-gateway-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/services/api-gateway-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/services/config-server-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/services/config-server-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/services/feedbacks-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/services/feedbacks-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/services/frontend-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/services/frontend-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/services/frontend-serviceCIP.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/services/frontend-serviceCIP.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/services/meteo-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/services/meteo-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/services/mysql-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/services/mysql-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/services/places-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/services/places-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/services/server-registry-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/services/server-registry-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/statefulsets/mysql-statefulset.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/statefulsets/mysql-statefulset.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/K8s/statefulsets/server-registry-statefulset.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/statefulsets/server-registry-statefulset.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/api-gateway.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/api-gateway.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/cities.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/cities.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/feedbacks.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/feedbacks.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/meteo.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/meteo.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/places.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/places.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,8 +50,8 @@
         <option value="Dockerfile" />
         <option value="Kubernetes Deployment" />
         <option value="Class" />
-        <option value="Kubernetes Pod" />
         <option value="Kubernetes Service" />
+        <option value="Kubernetes Pod" />
       </list>
     </option>
   </component>
@@ -130,7 +117,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/tetosever/Desktop/Cloud Projects/WeatherWise/api-gateway/src/main/resources",
+    "last_opened_file_path": "/Users/tetosever/Desktop/Cloud Projects/WeatherWise/K8s/configMap",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -155,13 +142,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/K8s/configMap" />
+      <recent name="$PROJECT_DIR$/cities" />
       <recent name="$PROJECT_DIR$/api-gateway/src/main/resources" />
       <recent name="$PROJECT_DIR$/cities/src/main/resources" />
       <recent name="$PROJECT_DIR$/feedbacks/src/main/resources" />
-      <recent name="$PROJECT_DIR$/meteo/src/main/resources" />
-      <recent name="$PROJECT_DIR$/places/src/main/resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/K8s/prod" />
       <recent name="$PROJECT_DIR$/config-server/src/main/resources/configurations" />
       <recent name="C:\Users\matti\Desktop\WeatherWise\api-gateway" />
       <recent name="C:\Users\matti\Desktop\WeatherWise\config-server\src\main\resources" />
@@ -342,7 +330,9 @@
     <MESSAGE value="FrontEnd - Fix First Loading and build issue" />
     <MESSAGE value="First part of K8, frontend fix" />
     <MESSAGE value="add k8s configuration for mysql" />
-    <option name="LAST_COMMIT_MESSAGE" value="add k8s configuration for mysql" />
+    <MESSAGE value="Added spring profiles to manage application in different enviroment and fixed meteo k8s" />
+    <MESSAGE value="fixed conflict and merge from remote" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed conflict and merge from remote" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

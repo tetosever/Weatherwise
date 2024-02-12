@@ -19,4 +19,35 @@ spec:
           image: matteosevergninistudent/places:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 8083 #port of app meteo, same of dockerfile
+            - containerPort: 8083
+          env:
+            - name: SPRING_CONFIG_IMPORT
+              valueFrom:
+                configMapKeyRef:
+                  name: places-config
+                  key: SPRING_CONFIG_IMPORT
+            - name: SPRING_PROFILES_ACTIVE
+              valueFrom:
+                configMapKeyRef:
+                  name: places-config
+                  key: SPRING_PROFILES_ACTIVE
+            - name: EUREKA_SERVICE_ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  name: places-config
+                  key: EUREKA_SERVICE_ADDRESS
+            - name: MYSQL_URL_CONNECTION
+              valueFrom:
+                configMapKeyRef:
+                  name: places-config
+                  key: MYSQL_URL_CONNECTION
+            - name: MYSQL_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: places-config
+                  key: MYSQL_USERNAME
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: places-secret
+                  key: MYSQL_PASSWORD

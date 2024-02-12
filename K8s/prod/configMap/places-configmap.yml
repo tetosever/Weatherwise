@@ -1,10 +1,11 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: feedbacks-config
+  name: places-config
 data:
   SPRING_CONFIG_IMPORT: "configserver:http://config-server-svc:9296/"
   SPRING_PROFILES_ACTIVE: "prod"
   EUREKA_SERVICE_ADDRESS: "http://eureka-0.eureka:8761/eureka"
-  POSTGRES_URL_CONNECTION: "jdbc:postgresql://postgresql-service:5432/feedback"
-  POSTGRES_USERNAME: "soldade12"
+  MYSQL_URL_CONNECTION: "jdbc:mysql://mysql-service:3306/comment"
+  MYSQL_USERNAME: "root"
+

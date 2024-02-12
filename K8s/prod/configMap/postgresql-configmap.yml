@@ -3,6 +3,5 @@ kind: ConfigMap
 metadata:
   name: postgresql-config
 data:
-  POSTGRES_DB: "feedback"
   POSTGRES_USERNAME: "postgres"
 

@@ -3,36 +3,37 @@ kind: StatefulSet
 metadata:
   name: mysql
 spec:
+  serviceName: mysql
+  replicas: 1
   selector:
     matchLabels:
-      app: mysql
-  serviceName: "mysql"
-  replicas: 1
+      app.kubernetes.io/name: mysql
+      app.kubernetes.io/instance: mysql-1
   template:
     metadata:
       labels:
-        app: mysql
+        app.kubernetes.io/name: mysql
+        app.kubernetes.io/instance: mysql-1
     spec:
+      restartPolicy: Always
       containers:
         - name: mysql
           image: mysql:latest
           imagePullPolicy: IfNotPresent
+          ports:
+            - name: mysql
+              containerPort: 3306
+              protocol: TCP
+          volumeMounts:
+            - name: mysql-data
+              mountPath: /var/lib/mysql
           env:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: mysql-secret
                   key: MYSQL_ROOT_PASSWORD
-          ports:
-            - containerPort: 3306
-          volumeMounts:
-            - name: mysql-storage
-              mountPath: /var/lib/mysql
-  volumeClaimTemplates:
-    - metadata:
-        name: mysql-storage
-      spec:
-        accessModes: [ "ReadWriteOnce" ]
-        resources:
-          requests:
-            storage: 1Gi
+      volumes:
+        - name: mysql-data
+          persistentVolumeClaim:
+            claimName: mysql-pvc

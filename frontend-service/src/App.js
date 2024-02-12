@@ -3,13 +3,17 @@ import WeatherSearchAP from './WeatherSearchAP';
 
 
 
+
 class App extends Component {
-constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
-      posts: []
-    }
+      posts: [],
+      location: 'Bergamo'
+    };
   }
+
+
 
 
   render() {
@@ -19,7 +23,7 @@ constructor(props) {
           <h1 class="display-4">WeatherWise</h1>
         </div>
          <div>
-      <h2>Search by City</h2>
+     
       <WeatherSearchAP />
     </div>
         

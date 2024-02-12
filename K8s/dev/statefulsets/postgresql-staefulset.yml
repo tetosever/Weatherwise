@@ -37,7 +37,7 @@ spec:
         - name: POSTGRES_DB
           value: feedback
         - name: POSTGRES_USER
-          value: admin
+          value: postgres
         - name: POSTGRES_PASSWORD
           valueFrom:
             secretKeyRef:

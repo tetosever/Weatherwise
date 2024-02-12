@@ -7,13 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="test to fix problem of config server in kubernetes">
+    <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="fix deploy problem">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/K8s/prod/configMap/meteo-configmap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/configMap/meteo-configmap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/prod/deployment/config-server-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/deployment/config-server-deployment.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/prod/deployment/meteo-deployment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/deployment/meteo-deployment.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/prod/secrets/config-server-secrets.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/secrets/config-server-secret.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meteo/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/meteo/src/main/resources/application-prod.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +254,7 @@
       <workItem from="1707352708797" duration="5836000" />
       <workItem from="1707469820823" duration="4407000" />
       <workItem from="1707581334423" duration="12539000" />
-      <workItem from="1707736150808" duration="372000" />
+      <workItem from="1707736150808" duration="2518000" />
     </task>
     <task id="LOCAL-00001" summary="FrontEnd - Fix First Loading and build issue">
       <option name="closed" value="true" />
@@ -308,7 +304,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707702629752</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix deploy problem">
+      <option name="closed" value="true" />
+      <created>1707737328553</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707737328553</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +340,8 @@
     <MESSAGE value="fixed config-server and meteo kube files and updated properties in config server" />
     <MESSAGE value="fixed properties for connection of kube services" />
     <MESSAGE value="test to fix problem of config server in kubernetes" />
-    <option name="LAST_COMMIT_MESSAGE" value="test to fix problem of config server in kubernetes" />
+    <MESSAGE value="fix deploy problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix deploy problem" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -5,6 +5,7 @@ import { AiFillLike, AiFillDislike } from "react-icons/ai";
 import StarRatingInput from './StarRatingInput';
 import { flushSync } from 'react-dom';
 
+
 function WeatherSearchAP() {
   const [location, setLocation] = useState('');
   const [weatherData, setWeatherData] = useState(null);
@@ -25,56 +26,9 @@ function WeatherSearchAP() {
   const [suggestions, setSuggestions] = useState([]);
 
   
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentDateTime(new Date());
-    }, 1000);
-    // Cleanup function to clear the interval when the component unmounts
-    return () => clearInterval(intervalId);
-  }, []); // Empty dependency array ensures the effect runs only once after initial render
-
-
-    const fetchSuggestions = async () => {
-      try {
-        // ${window.__RUNTIME_CONFIG__.GATWAY_SERVICE_API}
-        const response = await axios.get(`http://localhost:8080/cities/${location}`);
-        //const response = ['Bergamo', 'Bormio','Milano','Paris', 'London', 'Tokyo'];
-
-        console.log(location);
-        console.log(response.data.data.geonames);
-        setSuggestions(response.data.data.geonames);
-      } catch (error) {
-        console.error('Error fetching suggestions:', error);
-        setSuggestions([]);
-      }
-    };
-
-      // Handle input change event
-  const handleInputChange = (event) => {
-    const { value } = event.target;
-    setLocation(value); // Update location state with the input value
-    fetchSuggestions(value); // Fetch suggestions based on the input value
-  };
-
-  const handleSuggestionClick = (value) => {
-    setLocation(value); // Set location based on the suggestion clicked
-     handleSubmit();// Fetch weather data based on the selected location
-  };
-
-// eslint-disable-next-line react-hooks/exhaustive-deps
-useEffect(() => {
-  // This function will be invoked only once when the component mounts
-  console.log('Component mounted');
-  flushSync(() => {
-    setLocation("Bergamo");
-  });
-  console.log(location);
-  handleSubmit();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-}, []); // Empty dependency array ensures the effect runs only once
   
   // Fetch weather and point of interest data
-  const handleSubmit = async (event = null) => {
+  const  handleSubmit = async (event = null) => {
     try {
       const response1 = await axios.get(`http://localhost:8080/meteo/${location}`);
       setWeatherData(response1.data);
@@ -103,6 +57,55 @@ useEffect(() => {
 
    
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentDateTime(new Date());
+    }, 1000);
+   
+    return () => clearInterval(intervalId);
+  }, []); 
+
+
+    const fetchSuggestions = async () => {
+      try {
+        // ${window.__RUNTIME_CONFIG__.GATWAY_SERVICE_API}
+        const response = await axios.get(`http://localhost:8080/cities/${location}`);
+        //const response = ['Bergamo', 'Bormio','Milano','Paris', 'London', 'Tokyo'];
+
+        console.log(location);
+        console.log(response.data.data.geonames);
+        setSuggestions(response.data.data.geonames);
+      } catch (error) {
+        console.error('Error fetching suggestions:', error);
+        setSuggestions([]);
+      }
+    };
+
+      // Handle input change event
+  const handleInputChange = (event) => {
+    const { value } = event.target;
+    setLocation(value); 
+    fetchSuggestions(value); 
+  };
+
+  const handleSuggestionClick = (value) => {
+    setLocation(value); 
+     handleSubmit();
+  };
+
+// eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(() => {
+  // This function will be invoked only once when the component mounts
+  console.log('Component mounted');
+  flushSync(() => {
+    setLocation("Bergamo");
+  });
+  console.log(location);
+  handleSubmit();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+}, []); 
+  
 
   
   
@@ -175,6 +178,8 @@ useEffect(() => {
 
   return (
     <div>
+      <div className="header">
+      <h2>Search by City</h2>
       <div>
         <div className="form-container" >
           <label className="form-label">
@@ -211,7 +216,7 @@ useEffect(() => {
       {weatherData.data.weather.map((item, index) => (
         <div key={index}>
           <img className="weather-icon" src={"http://openweathermap.org/img/w/" + item.icon + ".png"} alt="Weather Icon" /> 
-          <h3>{item.main}</h3>
+          <h3> {item.main}</h3>
           <p><b>{item.description}</b></p>
         </div>
       ))}
@@ -249,8 +254,10 @@ useEffect(() => {
             )}
         </div>
         </div>
+
+      </div>
       <div>
-        <h2>Point of Interest</h2>
+       
         <div className="card-container">
           {posts.length === 0 ? (
             <p>No point of Interest Available</p>
@@ -278,8 +285,8 @@ useEffect(() => {
      </div>
      
       <form onSubmit={handlePointOfInterestSubmit}>
-        <label>
-          Place Name:
+        <label className="form-label">
+          Place Name
           <input
            className="form-input"
             type="text"
@@ -288,8 +295,8 @@ useEffect(() => {
             onChange={handleChangePointOfInterest}
           />
         </label>
-        <label>
-          User Name:
+        <label className="form-label">
+          User Name
           <input
            className="form-input"
             type="text"
@@ -298,11 +305,11 @@ useEffect(() => {
             onChange={handleChangePointOfInterest}
           />
         </label>
-        <label>
-        Rating:
+        <label className="form-label">
+        Rating
               <StarRatingInput value={newPointOfInterest.rating} onChange={handleRatingChange} />
         </label>
-        <label>
+        <label className="form-label">
           Description:
           <textarea
            className="form-input"
@@ -322,5 +329,6 @@ useEffect(() => {
     </div>
   );
 }
+
 
 export default WeatherSearchAP;

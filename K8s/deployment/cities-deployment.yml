@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cities-service-app
+  labels:
+    app: cities-service-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cities-service-app
+  template:
+    metadata:
+      labels:
+        app: cities-service-app
+    spec:
+      containers:
+        - name: cities-service-app
+          image: matteosevergninistudent/cities
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8081

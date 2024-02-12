@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: meteo-service-app
-          image: matteosevergninistudent/meteo
+          image: matteosevergninistudent/meteo:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8081
@@ -26,3 +26,8 @@ spec:
                 configMapKeyRef:
                   name: meteo-config
                   key: SPRING_CONFIG_IMPORT
+            - name: SPRING_PROFILES_ACTIVE
+              valueFrom:
+                configMapKeyRef:
+                  name: meteo-config
+                  key: SPRING_PROFILES_ACTIVE

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: config-server-app
-          image: matteosevergninistudent/config-server
+          image: matteosevergninistudent/config-server:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 9296
@@ -34,30 +34,30 @@ spec:
             - name: OPEN_GEONAMES_APPID
               valueFrom:
                 secretKeyRef:
-                  name: config-server-secrets
+                  name: config-server-secret
                   key: OPEN_GEONAMES_APPID
             - name: POSTGRESQL_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: config-server-secrets
+                  name: config-server-secret
                   key: POSTGRESQL_USERNAME
             - name: POSTGRESQL_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: config-server-secrets
+                  name: config-server-secret
                   key: POSTGRESQL_PASSWORD
             - name: OPEN_WEATHER_APPID
               valueFrom:
                 secretKeyRef:
-                  name: config-server-secrets
+                  name: config-server-secret
                   key: OPEN_WEATHER_APPID
             - name: MYSQL_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: config-server-secrets
+                  name: config-server-secret
                   key: MYSQL_USERNAME
             - name: MYSQL_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: config-server-secrets
+                  name: config-server-secret
                   key: MYSQL_PASSWORD

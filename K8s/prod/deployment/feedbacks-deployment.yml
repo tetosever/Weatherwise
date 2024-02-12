@@ -16,15 +16,38 @@ spec:
     spec:
       containers:
         - name: feedbacks-service-app
-          image: matteosevergninistudent/feedbacks
+          image: matteosevergninistudent/feedbacks:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8082
           env:
-            - name: POSTGRES_HOST   # Setting Database host address
-              value: postgresql-service
-            - name: POSTGRES_PASSWORD
+            - name: SPRING_CONFIG_IMPORT
+              valueFrom:
+                configMapKeyRef:
+                  name: feedbacks-config
+                  key: SPRING_CONFIG_IMPORT
+            - name: SPRING_PROFILES_ACTIVE
+              valueFrom:
+                configMapKeyRef:
+                  name: feedbacks-config
+                  key: SPRING_PROFILES_ACTIVE
+            - name: EUREKA_SERVICE_ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  name: feedbacks-config
+                  key: EUREKA_SERVICE_ADDRESS
+            - name: POSTGRES_URL_CONNECTION
+              valueFrom:
+                configMapKeyRef:
+                  name: feedbacks-config
+                  key: POSTGRES_URL_CONNECTION
+            - name: POSTGRES_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: feedbacks-config
+                  key: POSTGRES_USERNAME
+            - name: POSTGRESQL_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: postgresql-secret
-                  key: password
+                  name: feedbacks-secret
+                  key: POSTGRESQL_PASSWORD

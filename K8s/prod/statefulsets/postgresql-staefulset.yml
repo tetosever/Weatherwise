@@ -34,15 +34,21 @@ spec:
         - name: postgresql-data
           mountPath: /var/lib/postgresql/data
         env:
-        - name: POSTGRES_DB
-          value: feedback
-        - name: POSTGRES_USER
-          value: postgres
-        - name: POSTGRES_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: postgresql-secret
-              key: password
+          - name: POSTGRES_DB
+            valueFrom:
+              configMapKeyRef:
+                name: postgresql-config
+                key: POSTGRES_DB
+          - name: POSTGRES_USERNAME
+            valueFrom:
+              configMapKeyRef:
+                name: postgresql-config
+                key: POSTGRES_USERNAME
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: postgresql-secret
+                key: password
       volumes:
         - name: postgresql-data
           persistentVolumeClaim:

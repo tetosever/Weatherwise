@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: eureka
-          image: matteosevergninistudent/weatherwise:server-registry-v0.0.1
+          image: matteosevergninistudent/server-registry:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8761
@@ -24,9 +24,9 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: eureka-cm
-                  key: eureka_service_address`
-            - name: CONFIG_SERVER_ADDRESS
+                  key: EUREKA_SERVICE_ADDRESS
+            - name: SPRING_CONFIG_IMPORT
               valueFrom:
                 configMapKeyRef:
                   name: eureka-cm
-                  key: config_server_url`
+                  key: SPRING_CONFIG_IMPORT

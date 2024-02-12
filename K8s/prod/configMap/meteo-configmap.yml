@@ -3,6 +3,7 @@ kind: ConfigMap
 metadata:
   name: meteo-config
 data:
-  SPRING_CONFIG_IMPORT: "http://config-server-svc:9296"
+  SPRING_CONFIG_IMPORT: "configserver:http://config-server-svc:9296/"
   SPRING_PROFILES_ACTIVE: "prod"
+  EUREKA_SERVICE_ADDRESS: "http://eureka-0.eureka:8761/eureka"
 

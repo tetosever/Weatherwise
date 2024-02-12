@@ -31,3 +31,13 @@ spec:
                 configMapKeyRef:
                   name: meteo-config
                   key: SPRING_PROFILES_ACTIVE
+            - name: EUREKA_SERVICE_ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  name: meteo-config
+                  key: EUREKA_SERVICE_ADDRESS
+            - name: OPEN_WEATHER_APPID
+              valueFrom:
+                secretKeyRef:
+                  name: meteo-secret
+                  key: OPEN_WEATHER_APPID

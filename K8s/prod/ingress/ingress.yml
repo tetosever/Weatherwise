@@ -8,20 +8,20 @@ spec:
   rules:
     - http:
         paths:
-          - path: /
+          - path: /frontend
             pathType: Prefix
             backend:
               service:
                 name: frontend-service
                 port:
                   number: 80
-          - path: /([^/]+)
+          - path: /meteo
             pathType: ImplementationSpecific
             backend:
               service:
                 name: api-gateway-svc
                 port:
                   number: 80
-
+#([^/]+)
 
 

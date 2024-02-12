@@ -15,7 +15,5 @@ spec:
   type: ClusterIP
   clusterIP: None
   ports:
-    - name: http
-      port: 5432
-      targetPort: http
-      protocol: TCP
+    - port: 5432
+      targetPort: 5432

@@ -41,11 +41,11 @@ spec:
                 configMapKeyRef:
                   name: feedbacks-config
                   key: POSTGRES_URL_CONNECTION
-            - name: POSTGRES_USERNAME
+            - name: POSTGRES_USER
               valueFrom:
                 configMapKeyRef:
                   name: feedbacks-config
-                  key: POSTGRES_USERNAME
+                  key: POSTGRES_USER
             - name: POSTGRESQL_PASSWORD
               valueFrom:
                 secretKeyRef:

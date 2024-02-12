@@ -28,11 +28,11 @@ spec:
         - name: postgresql-data
           mountPath: /var/lib/postgresql/data
         env:
-          - name: POSTGRES_USERNAME
+          - name: POSTGRES_USER
             valueFrom:
               configMapKeyRef:
                 name: postgresql-config
-                key: POSTGRES_USERNAME
+                key: POSTGRES_USER
           - name: POSTGRES_PASSWORD
             valueFrom:
               secretKeyRef:

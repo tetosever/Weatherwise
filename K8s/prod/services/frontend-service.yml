@@ -5,14 +5,9 @@ metadata:
   labels:
     app: frontend-service
 spec:
-  type: LoadBalancer
-  ports:
-  - port: 80
-    targetPort: 80
-    protocol: TCP
-    nodePort: 32000
   selector:
     app: frontend-service
-
-
-
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 80

@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: api-gateway-svc
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
     - port: 8080
       targetPort: 8080
-      nodePort: 32001
   selector:
     app: api-gateway-app

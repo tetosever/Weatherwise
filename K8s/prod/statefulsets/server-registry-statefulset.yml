@@ -30,3 +30,8 @@ spec:
                 configMapKeyRef:
                   name: eureka-cm
                   key: SPRING_CONFIG_IMPORT
+            - name: REGISTRY_HOSTNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: eureka-cm
+                  key: REGISTRY_HOSTNAME

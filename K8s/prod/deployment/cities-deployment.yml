@@ -36,8 +36,8 @@ spec:
                 configMapKeyRef:
                   name: cities-config
                   key: EUREKA_SERVICE_ADDRESS
-            - name: OPEN_WEATHER_APPID
+            - name: OPEN_GEONAMES_APPID
               valueFrom:
                 secretKeyRef:
-                  name: meteo-secret
-                  key: OPEN_WEATHER_APPID
+                  name: cities-secret
+                  key: OPEN_GEONAMES_APPID

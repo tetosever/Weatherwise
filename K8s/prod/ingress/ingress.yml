@@ -8,7 +8,7 @@ spec:
   rules:
     - http:
         paths:
-          - path: /
+          - path: /frontend
             pathType: Prefix
             backend:
               service:
@@ -19,23 +19,9 @@ spec:
             pathType: ImplementationSpecific
             backend:
               service:
-                name: meteo-service-svc
+                name: api-gateway-svc
                 port:
-                  number: 8083
-          - path: /feedbacks
-            pathType: ImplementationSpecific
-            backend:
-              service:
-                name: meteo-service-svc
-                port:
-                  number: 8082
-          - path: /places
-            pathType: ImplementationSpecific
-            backend:
-              service:
-                name: meteo-service-svc
-                port:
-                  number: 8084
-
+                  number: 80
+#([^/]+)
 
 

@@ -53,7 +53,7 @@ jobs:
       working-directory: ./frontend-service
       run: |
         npm ci
-        sudo npm run build
+        npm run build
 
     - name: Build Docker image
       run: docker build -t matteosevergninistudent/frontend-service:latest ./frontend-service

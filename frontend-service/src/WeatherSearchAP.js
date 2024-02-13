@@ -25,12 +25,12 @@ function WeatherSearchAP() {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
   const [suggestions, setSuggestions] = useState([]);
 
-  
+  const url = "http://192.168.49.2:32093"
   
   // Fetch weather and point of interest data
   const  handleSubmit = async (event = null) => {
     try {
-      const response1 = await axios.get(`http://localhost:8080/meteo/${location}`);
+      const response1 = await axios.get(`${url}/meteo/${location}`);
       setWeatherData(response1.data);
      
     } catch (error) {
@@ -40,7 +40,7 @@ function WeatherSearchAP() {
     }
 
     try {
-      const response2 = await axios.get(`http://localhost:8080/places/cities/${location}`);
+      const response2 = await axios.get(`${url}/places/cities/${location}`);
       setPosts(response2.data);
     } catch (error) {
       console.error('Error fetching point of interest:', error);
@@ -48,7 +48,7 @@ function WeatherSearchAP() {
     }
 
     try {
-      const response4 = await axios.get(`http://localhost:8080/feedbacks/percentage/${location}`);
+      const response4 = await axios.get(`${url}/feedbacks/percentage/${location}`);
       setWeatherProbability(response4.data);
     } catch (error) {
       console.error('Error fetching weather probability:', error);
@@ -70,7 +70,7 @@ function WeatherSearchAP() {
     const fetchSuggestions = async () => {
       try {
         // ${window.__RUNTIME_CONFIG__.GATWAY_SERVICE_API}
-        const response = await axios.get(`http://localhost:8080/cities/${location}`);
+        const response = await axios.get(`${url}/cities/${location}`);
         //const response = ['Bergamo', 'Bormio','Milano','Paris', 'London', 'Tokyo'];
 
         console.log(location);
@@ -113,7 +113,7 @@ useEffect(() => {
   const handleFeedbackSubmit = async (value) => {
     try {
       console.log({id: location, rating: value});
-      const response3 = await axios.post('http://localhost:8080/feedbacks/', {
+      const response3 = await axios.post(`${url}/feedbacks/`, {
         city: location,
         isLike: Number(value)
       });
@@ -142,7 +142,7 @@ useEffect(() => {
     };
     try {
       console.log(userData);
-      const response4 = await axios.post('http://localhost:8080/places/', userData);
+      const response4 = await axios.post(`${url}/places/`, userData);
       console.log('Point of interest added:', response4.data);
       setNewPointOfInterest({
         userName: '',

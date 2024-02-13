@@ -7,5 +7,5 @@ spec:
     app: meteo-service-app
   type: ClusterIP 
   ports:
-    - port: 8081
-      targetPort: 8081
+    - port: 8083
+      targetPort: 8083

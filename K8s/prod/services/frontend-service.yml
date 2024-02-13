@@ -5,9 +5,12 @@ metadata:
   labels:
     app: frontend-service
 spec:
-  selector:
-    app: frontend-service
   type: ClusterIP
   ports:
-    - port: 80
-      targetPort: 80
+  - port: 80
+    targetPort: 80
+  selector:
+    app: frontend-service
+
+
+

@@ -19,7 +19,7 @@ spec:
           image: matteosevergninistudent/places:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 8083
+            - containerPort: 8084
           env:
             - name: SPRING_CONFIG_IMPORT
               valueFrom:

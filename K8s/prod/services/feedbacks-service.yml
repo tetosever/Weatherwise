@@ -5,7 +5,8 @@ metadata:
 spec:
   selector:
     app: feedbacks-service-app
-  type: ClusterIP 
+  type: NodePort 
   ports:
     - port: 8082
       targetPort: 8082
+      nodePort: 32002

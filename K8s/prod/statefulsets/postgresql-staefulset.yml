@@ -38,6 +38,8 @@ spec:
               secretKeyRef:
                 name: postgresql-secret
                 key: password
+          - name: POSTGRES_DB
+            value: feedback
       volumes:
         - name: postgresql-data
           persistentVolumeClaim:

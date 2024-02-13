@@ -7,4 +7,4 @@ data:
   SPRING_PROFILES_ACTIVE: "prod"
   EUREKA_SERVICE_ADDRESS: "http://eureka-0.eureka:8761/eureka"
   POSTGRES_URL_CONNECTION: "jdbc:postgresql://postgresql-service:5432/feedback"
-  POSTGRES_USER: "postgres"
+  POSTGRESQL_USER: "soldade12"

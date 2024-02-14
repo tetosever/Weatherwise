@@ -25,7 +25,8 @@ function WeatherSearchAP() {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
   const [suggestions, setSuggestions] = useState([]);
 
-  const url = "http://192.168.49.2:32093"
+  const url = process.env.API_GATEWAY
+
   
   // Fetch weather and point of interest data
   const  handleSubmit = async (event = null) => {

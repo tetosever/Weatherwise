@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: cities-service-app
-          image: matteosevergninistudent/cities:latest
+          image: tetosever/cities:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8081

@@ -56,7 +56,7 @@ jobs:
         npm run build
 
     - name: Build Docker image
-      run: docker build -t matteosevergninistudent/frontend-service:latest ./frontend-service
+      run: docker build -t tetosever/frontend-service:latest ./frontend-service
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v1
@@ -65,4 +65,4 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Push Docker image to Docker Hub
-      run: docker push matteosevergninistudent/frontend-service:latest
+      run: docker push tetosever/frontend-service:latest

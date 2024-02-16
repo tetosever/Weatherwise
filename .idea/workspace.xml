@@ -9,15 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="Final Ingress K8s">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/prod/configMap/api-gateway-configmap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/configMap/api-gateway-configmap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/prod/configMap/cities-configmap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/configMap/cities-configmap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/prod/configMap/config-server-configmap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/configMap/config-server-configmap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/prod/configMap/feedbacks-configmap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/configMap/feedbacks-configmap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/prod/configMap/meteo-configmap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/configMap/meteo-configmap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/prod/configMap/places-configmap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/configMap/places-configmap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K8s/prod/configMap/server-registry-configmap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s/prod/configMap/server-registry-configmap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meteo/src/main/resources/application-local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/meteo/src/main/resources/application-local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,48 +66,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.All in places.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.CitiesApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ConfigServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.FeedbacksApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MeteoApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.PlacesApplication (1).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.PlacesApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ServerRegistryApplication.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/nicolourbani/Documenti/WeatherWise/K8s/prod/configMap&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;spring&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;d6facce7a65ca980ad5197c19e743e71&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.All in places.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ApiGatewayApplication.executor": "Run",
+    "Spring Boot.CitiesApplication.executor": "Run",
+    "Spring Boot.ConfigServerApplication.executor": "Run",
+    "Spring Boot.FeedbacksApplication.executor": "Run",
+    "Spring Boot.MeteoApplication.executor": "Run",
+    "Spring Boot.PlacesApplication (1).executor": "Run",
+    "Spring Boot.PlacesApplication.executor": "Run",
+    "Spring Boot.ServerRegistryApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/tetosever/Desktop/Cloud Projects/WeatherWise",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "spring",
+    "spring.configuration.checksum": "d6facce7a65ca980ad5197c19e743e71",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -265,6 +256,8 @@
       <workItem from="1707469820823" duration="4407000" />
       <workItem from="1707581334423" duration="12539000" />
       <workItem from="1707736150808" duration="372000" />
+      <workItem from="1707947914746" duration="36000" />
+      <workItem from="1707947964260" duration="4621000" />
     </task>
     <task id="LOCAL-00001" summary="FrontEnd - Fix First Loading and build issue">
       <option name="closed" value="true" />

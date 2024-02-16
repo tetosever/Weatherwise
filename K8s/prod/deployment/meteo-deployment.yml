@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: meteo-service-app
-          image: tetosever/cloud1:v0.0.2
+          image: tetosever/meteo:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8083

@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: feedbacks-service-app
+  labels:
+    app: feedbacks-service-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: feedbacks-service-app
+  template:
+    metadata:
+      labels:
+        app: feedbacks-service-app
+    spec:
+      containers:
+        - name: feedbacks-service-app
+          image: tetosever/feedbacks:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8082
+          env:
+            - name: SPRING_CONFIG_IMPORT
+              valueFrom:
+                configMapKeyRef:
+                  name: feedbacks-config
+                  key: SPRING_CONFIG_IMPORT
+            - name: SPRING_PROFILES_ACTIVE
+              valueFrom:
+                configMapKeyRef:
+                  name: feedbacks-config
+                  key: SPRING_PROFILES_ACTIVE
+            - name: EUREKA_SERVICE_ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  name: feedbacks-config
+                  key: EUREKA_SERVICE_ADDRESS
+            - name: POSTGRES_URL_CONNECTION
+              valueFrom:
+                configMapKeyRef:
+                  name: feedbacks-config
+                  key: POSTGRES_URL_CONNECTION
+            - name: POSTGRESQL_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: feedbacks-config
+                  key: POSTGRESQL_USER
+            - name: POSTGRESQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: feedbacks-secret
+                  key: POSTGRESQL_PASSWORD

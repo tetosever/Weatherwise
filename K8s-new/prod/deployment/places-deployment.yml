@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: places-service-app
+  labels:
+    app: places-service-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: places-service-app
+  template:
+    metadata:
+      labels:
+        app: places-service-app
+    spec:
+      containers:
+        - name: places-service-app
+          image: tetosever/places:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8084
+          env:
+            - name: SPRING_CONFIG_IMPORT
+              valueFrom:
+                configMapKeyRef:
+                  name: places-config
+                  key: SPRING_CONFIG_IMPORT
+            - name: SPRING_PROFILES_ACTIVE
+              valueFrom:
+                configMapKeyRef:
+                  name: places-config
+                  key: SPRING_PROFILES_ACTIVE
+            - name: EUREKA_SERVICE_ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  name: places-config
+                  key: EUREKA_SERVICE_ADDRESS
+            - name: MYSQL_URL_CONNECTION
+              valueFrom:
+                configMapKeyRef:
+                  name: places-config
+                  key: MYSQL_URL_CONNECTION
+            - name: MYSQL_USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: places-config
+                  key: MYSQL_USERNAME
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: places-secret
+                  key: MYSQL_PASSWORD

@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: feedbacks-service
+spec:
+  selector:
+    app: feedbacks-service-app
+  type: ClusterIP
+  ports:
+    - port: 8082
+      targetPort: 8082

@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: meteo-service-svc
+spec:
+  selector:
+    app: meteo-service-app
+  type: ClusterIP 
+  ports:
+    - port: 8083
+      targetPort: 8083

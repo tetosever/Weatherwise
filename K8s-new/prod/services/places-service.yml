@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: places-service-svc
+spec:
+  selector:
+    app: places-service-app
+  type: ClusterIP
+  ports:
+    - port: 8084
+      targetPort: 8084

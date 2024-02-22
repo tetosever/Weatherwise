@@ -1,0 +1,26 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: frontend-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-service
+  template:
+    metadata:
+      labels:
+        app: frontend-service
+    spec:
+      containers:
+      - name: frontend-service
+        image: tetosever/frontend-service:latest
+        ports:
+        - containerPort: 80
+        env:
+          - name: API_GATEWAY
+            valueFrom:
+              configMapKeyRef:
+                name: frontend-config
+                key: API_GATEWAY
+

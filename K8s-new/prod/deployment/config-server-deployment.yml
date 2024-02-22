@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: config-server-app
+  labels:
+    app: config-server-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: config-server-app
+  template:
+    metadata:
+      labels:
+        app: config-server-app
+    spec:
+      containers:
+        - name: config-server-app
+          image: tetosever/config-server:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9296
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              valueFrom:
+                configMapKeyRef:
+                  name: config-server-config
+                  key: SPRING_PROFILES_ACTIVE
+            - name: EUREKA_SERVICE_ADDRESS
+              valueFrom:
+                configMapKeyRef:
+                  name: config-server-config
+                  key: EUREKA_SERVICE_ADDRESS
+            - name: OPEN_GEONAMES_APPID
+              valueFrom:
+                secretKeyRef:
+                  name: config-server-secret
+                  key: OPEN_GEONAMES_APPID
+            - name: POSTGRESQL_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: config-server-secret
+                  key: POSTGRESQL_USERNAME
+            - name: POSTGRESQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: config-server-secret
+                  key: POSTGRESQL_PASSWORD
+            - name: OPEN_WEATHER_APPID
+              valueFrom:
+                secretKeyRef:
+                  name: config-server-secret
+                  key: OPEN_WEATHER_APPID
+            - name: MYSQL_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: config-server-secret
+                  key: MYSQL_USERNAME
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: config-server-secret
+                  key: MYSQL_PASSWORD

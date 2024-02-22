@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: config-server-app
-          image: tetosever/config-server:latest
+          image: matteosevergninistudent/config-server:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 9296

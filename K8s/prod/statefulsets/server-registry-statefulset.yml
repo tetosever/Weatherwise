@@ -29,6 +29,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: eureka-cm
+<<<<<<< HEAD
                   key: SPRING_CONFIG_IMPORT
             - name: SPRING_PROFILES_ACTIVE
               valueFrom:
@@ -40,3 +41,6 @@ spec:
                 configMapKeyRef:
                   name: eureka-cm
                   key: REGISTRY_HOSTNAME
+=======
+                  key: SPRING_CONFIG_IMPORT
+>>>>>>> parent of 5566f9a (fixed)

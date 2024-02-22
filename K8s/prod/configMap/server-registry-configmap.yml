@@ -6,4 +6,7 @@ data:
   EUREKA_SERVICE_ADDRESS: "http://eureka:8761/eureka"
   SPRING_PROFILES_ACTIVE: "prod"
   SPRING_CONFIG_IMPORT: "configserver:http://config-server-svc:9296/"
+<<<<<<< HEAD
   REGISTRY_HOSTNAME: "eureka-0.eureka"
+=======
+>>>>>>> parent of 5566f9a (fixed)

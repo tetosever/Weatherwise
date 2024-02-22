@@ -7,8 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="Final Ingress K8s">
-      <change beforePath="$PROJECT_DIR$/K8s-new/prod/configMap/server-registry-configmap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/K8s-new/prod/configMap/server-registry-configmap.yml" afterDir="false" />
+    <list default="true" id="2f7e8806-1a2d-4758-8639-5819de355f9f" name="Changes" comment="fix dc">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/server-registry.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/configurations/prod/server-registry.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -252,7 +252,7 @@
       <workItem from="1707736150808" duration="372000" />
       <workItem from="1707947914746" duration="36000" />
       <workItem from="1707947964260" duration="4621000" />
-      <workItem from="1708615169844" duration="1706000" />
+      <workItem from="1708615169844" duration="3166000" />
     </task>
     <task id="LOCAL-00001" summary="FrontEnd - Fix First Loading and build issue">
       <option name="closed" value="true" />
@@ -374,7 +374,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708616152591</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fix dc">
+      <option name="closed" value="true" />
+      <created>1708617810345</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1708617810345</updated>
+    </task>
+    <task id="LOCAL-00017" summary="fix dc">
+      <option name="closed" value="true" />
+      <created>1708617816059</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1708617816059</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +422,8 @@
     <MESSAGE value="Final Fix K8s - with MS" />
     <MESSAGE value="Final Frontend Run" />
     <MESSAGE value="Final Ingress K8s" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final Ingress K8s" />
+    <MESSAGE value="fix dc" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix dc" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

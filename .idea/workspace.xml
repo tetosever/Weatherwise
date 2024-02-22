@@ -249,7 +249,7 @@
       <workItem from="1707736150808" duration="372000" />
       <workItem from="1707947914746" duration="36000" />
       <workItem from="1707947964260" duration="4621000" />
-      <workItem from="1708615169844" duration="593000" />
+      <workItem from="1708615169844" duration="978000" />
     </task>
     <task id="LOCAL-00001" summary="FrontEnd - Fix First Loading and build issue">
       <option name="closed" value="true" />
@@ -331,7 +331,39 @@
       <option name="project" value="LOCAL" />
       <updated>1707870452889</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Final Ingress K8s">
+      <option name="closed" value="true" />
+      <created>1708615932499</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1708615932499</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Final Ingress K8s">
+      <option name="closed" value="true" />
+      <created>1708615940415</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1708615940415</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Final Ingress K8s">
+      <option name="closed" value="true" />
+      <created>1708615947534</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1708615947534</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Final Ingress K8s">
+      <option name="closed" value="true" />
+      <created>1708616074590</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1708616074590</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
